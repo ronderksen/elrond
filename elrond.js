@@ -219,10 +219,10 @@ app.use((req, res) => {
   res.end('Nothing to see here, move along');
 });
 
-app.listen(port, 'localhost', (err) => {
+app.listen(port, '0.0.0.0', (err) => {
   if (err) {
     logger.error(err);
   }
-  logger.info('server started');
+  logger.info(`server started on port ${port}`);
 })
 
