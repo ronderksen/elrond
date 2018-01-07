@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 const Discord = require("discord.io");
 const logger = require("winston");
 const auth = require("./auth.json");
-const templates = require('./templates.js');
+const templates = require("./templates.js");
 
 async function getCardIndex() {
   logger.info("Retrieving card list");
@@ -18,14 +18,14 @@ async function getCardIndex() {
 
 function checkFilters(card, filters) {
   const filterFields = {
-    b: 'threat',
-    o: 'cost',
-    a: 'attack',
-    d: 'defense',
-    w: 'willpower',
-    h: 'health',
-    s: 'sphere',
-    t: 'type_code',
+    b: "threat",
+    o: "cost",
+    a: "attack",
+    d: "defense",
+    w: "willpower",
+    h: "health",
+    s: "sphere",
+    t: "type_code"
   };
   return filters.every(f => {
     if (!filterFields[f.filterKey]) {
@@ -36,19 +36,16 @@ function checkFilters(card, filters) {
       // card does not have field, so no match
       return false;
     }
-    
+
     return card[filterFields[f.filterKey]].toString() === f.value;
   });
 }
 
-function createCardMessage(
-  emoji,
-  card
-) {
+function createCardMessage(emoji, card) {
   switch (card.type_code) {
-    case 'hero':
+    case "hero":
       return templates.hero(card, emoji);
-    case 'ally':
+    case "ally":
       return templates.ally(card, emoji);
     default:
       return templates.card(card, emoji);
@@ -77,7 +74,7 @@ getCardIndex().then(cardList => {
     "defense",
     "willpower",
     "threat",
-    "hitpoints",
+    "hitpoints"
   ];
   let emojiSymbols;
 
@@ -112,10 +109,10 @@ getCardIndex().then(cardList => {
       const { name, filters } = args.reduce(
         (acc, arg) => {
           if (arg.indexOf(":") > -1) {
-            const [filterKey, value] = arg.split(':');
+            const [filterKey, value] = arg.split(":");
             return {
               name: acc.name,
-              filters: [...acc.filters, {filterKey, value}]
+              filters: [...acc.filters, { filterKey, value }]
             };
           }
           return {
@@ -151,52 +148,57 @@ getCardIndex().then(cardList => {
         case "rings":
           logger.info(`Searching for ${name.trim()}`);
           const matches = cardList
-          .filter(c => c.name.toLowerCase().indexOf(name.trim()) > -1)
-          .filter(c => checkFilters(c, filters));
+            .filter(c => c.name.toLowerCase().indexOf(name.trim()) > -1)
+            .filter(c => checkFilters(c, filters));
 
           logger.info(`found ${matches.length} cards, sending response`);
           const message = matches.reduce((acc, card) => {
-            acc += createCardMessage(emojiSymbols, card)
+            acc += createCardMessage(emojiSymbols, card);
             return acc;
-          }, '');
+          }, "");
           bot.sendMessage({
             to: channelID,
             message
           });
           break;
-        case "ringsimg": 
+        case "ringsimg":
           logger.info(`Searching for ${name.trim()}`);
           const imgMatches = cardList
-          .filter(c => c.name.toLowerCase().indexOf(name.trim()) > -1)
-          .filter(c => checkFilters(c, filters));
+            .filter(c => c.name.toLowerCase().indexOf(name.trim()) > -1)
+            .filter(c => checkFilters(c, filters));
 
           logger.info(`found ${imgMatches.length} cards, sending response`);
           bot.sendMessage({
             to: channelID,
-            message: `Cards found: ${imgMatches.length}\n\n`,
+            message: `Cards found: ${imgMatches.length}\n\n`
           });
-          imgMatches.forEach(async (card) => {
+          imgMatches.forEach(async card => {
             let img;
             try {
-              img = await fetch(`http://ringsdb.com/${card.imagesrc}`).then(res => res.buffer());
+              img = await fetch(`http://ringsdb.com/${card.imagesrc}`).then(
+                res => res.buffer()
+              );
             } catch (err) {
               logger.error(err);
             }
-  
+
             if (img) {
-              bot.uploadFile({
-                to: channelID,
-                file: img,
-                filename: `${card.name}.png`,
-              }, (err, res) => {
-                if (err) {
-                  logger.error(err);
+              bot.uploadFile(
+                {
+                  to: channelID,
+                  file: img,
+                  filename: `${card.name}.png`
+                },
+                (err, res) => {
+                  if (err) {
+                    logger.error(err);
+                  }
                 }
-              });
+              );
             } else {
               bot.sendMessage({
                 to: channelID,
-                message: 'Unable to retrieve image',
+                message: "Unable to retrieve image"
               });
             }
           });
