@@ -22,7 +22,7 @@ function card({
   pack_name,
   position,
 }, emoji) {
-  let message = `${emoji[sphere_code]} **${name}**\n*${sphere_name} ${type_name}* - Cost: **${cost}**\n`;
+  let message = `${emoji[sphere_code] || ''} **${name}**\n*${sphere_name} ${type_name}* - Cost: **${cost}**\n`;
   message += `${parseText(text, emoji)}\n`;
   if (flavor) {
     message += `*${flavor.replace(/<cite>/g, " - ").replace(/<\/cite>/, "")}*\n`;
@@ -48,7 +48,7 @@ function hero({
   pack_name,
   position,
 }, emoji) {
-  let message = `${emoji[sphere_code]} **${name}**\n*${sphere_name} ${type_name}* - Starting Threat: **${threat}**\n${emoji["willpower"]} ${willpower} ${emoji['attack']} ${attack} ${emoji['defense']} ${defense} ${emoji['hitpoints']} ${health}\n`;
+  let message = `${emoji[sphere_code] || ''} **${name}**\n*${sphere_name} ${type_name}* - Starting Threat: **${threat}**\n${emoji["willpower"]} ${willpower} ${emoji['attack']} ${attack} ${emoji['defense']} ${defense} ${emoji['hitpoints']} ${health}\n`;
   if (traits) {
     message += `**${traits}**\n\n`;
   }
@@ -78,7 +78,7 @@ function ally({
   pack_name,
   position,
 }, emoji) {
-  let message = `${emoji[sphere_code]} **${name}**\n*${sphere_name} ${type_name}* - Cost: **${cost}**\n${emoji["willpower"]} ${willpower} ${emoji['attack']} ${attack} ${emoji['defense']} ${defense} ${emoji['hitpoints']} ${health}\n`;
+  let message = `${emoji[sphere_code] || ''} **${name}**\n*${sphere_name} ${type_name}* - Cost: **${cost}**\n${emoji["willpower"]} ${willpower} ${emoji['attack']} ${attack} ${emoji['defense']} ${defense} ${emoji['hitpoints']} ${health}\n`;
   if (traits) {
     message += `**${traits}**\n\n`;
   }
