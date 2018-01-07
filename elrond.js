@@ -2,54 +2,52 @@ const fetch = require("node-fetch");
 const Discord = require("discord.io");
 const logger = require("winston");
 const auth = require("./auth.json");
-const templates = require("./templates.js");
+const getCommandList = require("./commands.js");
 
 async function getCardIndex() {
-  logger.info("Retrieving card list");
+  logger.info("Retrieving player cards");
   try {
-    return fetch("http://ringsdb.com/api/public/cards/?_format=json")
-      .then(res => res.json())
-      .catch(err => logger.error(err));
+    return fetch("http://ringsdb.com/api/public/cards/?_format=json").then(
+      res => res.json()
+    );
   } catch (err) {
     logger.error(err);
     return Promise.reject(err);
   }
 }
 
-function checkFilters(card, filters) {
-  const filterFields = {
-    b: "threat",
-    o: "cost",
-    a: "attack",
-    d: "defense",
-    w: "willpower",
-    h: "health",
-    s: "sphere",
-    t: "type_code"
-  };
-  return filters.every(f => {
-    if (!filterFields[f.filterKey]) {
-      // invalid filter type
-      return true;
-    }
-    if (!card[filterFields[f.filterKey]]) {
-      // card does not have field, so no match
-      return false;
-    }
-
-    return card[filterFields[f.filterKey]].toString() === f.value;
-  });
+async function getQuestIndex() {
+  logger.info("Retrieving quest cards");
+  try {
+    return fetch(
+      "http://192.168.1.101/wordpress/wp-content/uploads/2017/12/QuestCards.json"
+    ).then(res => res.json());
+  } catch (err) {
+    logger.error(err);
+    return Promise.reject(err);
+  }
 }
 
-function createCardMessage(emoji, card) {
-  switch (card.type_code) {
-    case "hero":
-      return templates.hero(card, emoji);
-    case "ally":
-      return templates.ally(card, emoji);
-    default:
-      return templates.card(card, emoji);
-  }
+function getNameAndFilters(args) {
+  return args.reduce(
+    (acc, arg) => {
+      if (arg.indexOf(":") > -1) {
+        const [filterKey, value] = arg.split(":");
+        return {
+          name: acc.name,
+          filters: [...acc.filters, { filterKey, value }]
+        };
+      }
+      return {
+        ...acc,
+        name: `${acc.name} ${arg.toLowerCase()}`
+      };
+    },
+    {
+      name: "",
+      filters: []
+    }
+  );
 }
 
 // Configure logger settings
@@ -59,170 +57,100 @@ logger.add(logger.transports.Console, {
 });
 logger.level = "debug";
 // Initialize Discord Bot
-getCardIndex().then(cardList => {
-  logger.info("cardlist ready");
-  const bot = new Discord.Client({
-    token: auth.token,
-    autorun: true
-  });
-  const emojiNames = [
-    "lore",
-    "spirit",
-    "leadership",
-    "tactics",
-    "attack",
-    "defense",
-    "willpower",
-    "threat",
-    "hitpoints"
-  ];
-  let emojiSymbols;
-
-  bot.on("ready", evt => {
-    logger.info("Connected");
-    logger.info("Logged in as: ");
-    logger.info(bot.username + " - (" + bot.id + ")");
-    const server = Object.values(bot.servers)[0];
-    emojiSymbols = emojiNames.reduce((acc, emo) => {
-      const emoji = Object.values(server.emojis).find(
-        emoji => emoji.name === emo
-      );
-      if (emoji) {
-        return {
-          ...acc,
-          [emo]: `<:${emo}:${emoji.id}>`
-        };
+Promise.all([getCardIndex(), getQuestIndex()])
+  .then(([cardList, questCards]) => {
+    const questIndex = questCards.reduce((acc, quest) => {
+      if (!quest.EncounterInfo) {
+        return acc;
       }
-      return acc;
-    }, {});
-  });
+      const title = quest.EncounterInfo.EncounterSet;
+      if (acc.includes(title)) {
+        return acc;
+      }
+      return [...acc, title];
+    }, []);
+    return [cardList, questIndex];
+  })
+  .then(([cardList, questIndex]) => {
+    const bot = new Discord.Client({
+      token: auth.token,
+      autorun: true
+    });
+    const emojiNames = [
+      "lore",
+      "spirit",
+      "leadership",
+      "tactics",
+      "neutral",
+      "fellowship",
+      "attack",
+      "defense",
+      "willpower",
+      "threat",
+      "hitpoints"
+    ];
+    let emojiSymbols;
 
-  bot.on("message", (user, userID, channelID, message, evt) => {
-    // Our bot needs to know if it will execute a command
-    // It will listen for messages that will start with `!`
-    if (message.startsWith("!")) {
-      var args = message.substring(1).split(" ");
-      var cmd = args[0];
-
-      args = args.splice(1);
-
-      const { name, filters } = args.reduce(
-        (acc, arg) => {
-          if (arg.indexOf(":") > -1) {
-            const [filterKey, value] = arg.split(":");
-            return {
-              name: acc.name,
-              filters: [...acc.filters, { filterKey, value }]
-            };
-          }
+    bot.on("ready", evt => {
+      logger.info("Connected");
+      logger.info("Logged in as: ");
+      logger.info(bot.username + " - (" + bot.id + ")");
+      const server = Object.values(bot.servers)[0];
+      emojiSymbols = emojiNames.reduce((acc, emo) => {
+        const emoji = Object.values(server.emojis).find(
+          emoji => emoji.name === emo
+        );
+        if (emoji) {
           return {
             ...acc,
-            name: `${acc.name} ${arg.toLowerCase()}`
+            [emo]: `<:${emo}:${emoji.id}>`
           };
-        },
-        {
-          name: "",
-          filters: []
         }
-      );
+        return acc;
+      }, {});
+    });
 
-      switch (cmd) {
-        case "help":
-          bot.sendMessage({
-            to: channelID,
-            message: `I can help you with various questions you might have.
-            Type !rings **name** **filters** to retrieve card information from ringsdb.
-            **filters** uses the same format as the filters on ringsdb, i.e. t:hero for a hero card
-            supported options are:
-            t: type,
-            b: threat,
-            c: cost,
-            a: attack,
-            d: defense,
-            w: willpower,
-            h: hitpoints,
-            s: sphere,
-            `
-          });
-          break;
-        case "rings":
-          logger.info(`Searching for ${name.trim()}`);
-          const matches = cardList
-            .filter(c => c.name.toLowerCase().indexOf(name.trim()) > -1)
-            .filter(c => checkFilters(c, filters));
+    bot.on("message", (user, userID, channelID, message, evt) => {
+      // Our bot needs to know if it will execute a command
+      // It will listen for messages that will start with `!`
+      if (message.startsWith("!")) {
+        var args = message.substring(1).split(" ");
+        var cmd = args[0];
 
-          logger.info(`found ${matches.length} cards, sending response`);
-          const message = matches.reduce((acc, card) => {
-            acc += createCardMessage(emojiSymbols, card);
-            return acc;
-          }, "");
-          bot.sendMessage({
-            to: channelID,
-            message
-          });
-          break;
-        case "ringsimg":
-          logger.info(`Searching for ${name.trim()}`);
-          const imgMatches = cardList
-            .filter(c => c.name.toLowerCase().indexOf(name.trim()) > -1)
-            .filter(c => checkFilters(c, filters));
+        args = args.splice(1);
 
-          logger.info(`found ${imgMatches.length} cards, sending response`);
-          bot.sendMessage({
-            to: channelID,
-            message: `Cards found: ${imgMatches.length}\n\n`
-          });
-          imgMatches.forEach(async card => {
-            let img;
-            try {
-              img = await fetch(`http://ringsdb.com/${card.imagesrc}`).then(
-                res => res.buffer()
-              );
-            } catch (err) {
-              logger.error(err);
-            }
-
-            if (img) {
-              bot.uploadFile(
-                {
-                  to: channelID,
-                  file: img,
-                  filename: `${card.name}.png`
-                },
-                (err, res) => {
-                  if (err) {
-                    logger.error(err);
-                  }
-                }
-              );
-            } else {
-              bot.sendMessage({
-                to: channelID,
-                message: "Unable to retrieve image"
-              });
-            }
-          });
-
-          break;
+        const query = getNameAndFilters(args);
+        const commandConfig = {
+          user, 
+          userID,
+          cardList,
+          questIndex,
+          emojiSymbols,
+          bot,
+          channelID,
+          logger
+        };
+        const commands = getCommandList(commandConfig);
+        switch (cmd) {
+          case "help":
+            return commands.help();
+          case "rings":
+            return commands.rings(query);
+          case "ringsimg":
+            return commands.ringsimg(query);
+          case "quest":
+            return commands.quest();
+          case "hero":
+            return commands.hero(query);
+          case "card":
+            return commands.card();
+          case "faq":
+            return commands.faq(query);
+          case "myrings":
+            return commands.myrings();
+          default:
+            return null;
+        }
       }
-    }
+    });
   });
-});
-
-// Make heroku happy and bind a web server to $PORT
-const express = require('express');
-
-const app = express();
-const port = process.env.PORT || 3000;
-
-app.use((req, res) => {
-  res.end('Nothing to see here, move along');
-});
-
-app.listen(port, '0.0.0.0', (err) => {
-  if (err) {
-    logger.error(err);
-  }
-  logger.info(`server started on port ${port}`);
-})
-
