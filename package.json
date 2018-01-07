@@ -20,6 +20,8 @@
   "homepage": "https://github.com/ronderksen/elrond#readme",
   "dependencies": {
     "discord.io": "github:woor/discord.io#gateway_v6",
+    "node-fetch": "^1.7.3",
+    "nodemon": "^1.14.8",
     "winston": "^2.4.0"
   }
 }
