@@ -2,7 +2,7 @@ const fetch = require("node-fetch");
 const Discord = require("discord.io");
 const logger = require("winston");
 const auth = require("./auth.json");
-const getCommandList = require("./commands.js");
+const getCommandList = require("./commands");
 
 async function getCardIndex() {
   logger.info("Retrieving player cards");
@@ -40,7 +40,7 @@ function getNameAndFilters(args) {
       }
       return {
         ...acc,
-        name: `${acc.name} ${arg.toLowerCase()}`
+        name: `${acc.name} ${arg.toLowerCase()}`.trim()
       };
     },
     {
@@ -143,7 +143,7 @@ Promise.all([getCardIndex(), getQuestIndex()])
           case "hero":
             return commands.hero(query);
           case "card":
-            return commands.card();
+            return commands.card(query);
           case "faq":
             return commands.faq(query);
           case "myrings":

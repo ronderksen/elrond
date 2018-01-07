@@ -1,4 +1,4 @@
-const templates = require("./templates");
+const templates = require("../templates");
 
 function getRandomItem(array) {
   const index = Math.floor(Math.random() * Math.floor(array.length));
