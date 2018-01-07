@@ -1,0 +1,25 @@
+{
+  "name": "elrond",
+  "version": "1.0.0",
+  "description": "Discord bot for looking up cards and card images",
+  "main": "elrond.js",
+  "scripts": {
+    "start": "node elrond.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ronderksen/elrond.git"
+  },
+  "keywords": [],
+  "author": "Ron Derksen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ronderksen/elrond/issues"
+  },
+  "homepage": "https://github.com/ronderksen/elrond#readme",
+  "dependencies": {
+    "discord.io": "github:woor/discord.io#gateway_v6",
+    "winston": "^2.4.0"
+  }
+}
