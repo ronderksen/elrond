@@ -108,6 +108,27 @@ getCardIndex().then(cardList => {
       var cmd = args[0];
 
       args = args.splice(1);
+
+      const { name, filters } = args.reduce(
+        (acc, arg) => {
+          if (arg.indexOf(":") > -1) {
+            const [filterKey, value] = arg.split(':');
+            return {
+              name: acc.name,
+              filters: [...acc.filters, {filterKey, value}]
+            };
+          }
+          return {
+            ...acc,
+            name: `${acc.name} ${arg.toLowerCase()}`
+          };
+        },
+        {
+          name: "",
+          filters: []
+        }
+      );
+
       switch (cmd) {
         case "help":
           bot.sendMessage({
@@ -128,25 +149,6 @@ getCardIndex().then(cardList => {
           });
           break;
         case "rings":
-          const { name, filters } = args.reduce(
-            (acc, arg) => {
-              if (arg.indexOf(":") > -1) {
-                const [filterKey, value] = arg.split(':');
-                return {
-                  name: acc.name,
-                  filters: [...acc.filters, {filterKey, value}]
-                };
-              }
-              return {
-                ...acc,
-                name: `${acc.name} ${arg.toLowerCase()}`
-              };
-            },
-            {
-              name: "",
-              filters: []
-            }
-          );
           logger.info(`Searching for ${name.trim()}`);
           const matches = cardList
           .filter(c => c.name.toLowerCase().indexOf(name.trim()) > -1)
@@ -161,6 +163,45 @@ getCardIndex().then(cardList => {
             to: channelID,
             message
           });
+          break;
+        case "ringsimg": 
+          logger.info(`Searching for ${name.trim()}`);
+          const imgMatches = cardList
+          .filter(c => c.name.toLowerCase().indexOf(name.trim()) > -1)
+          .filter(c => checkFilters(c, filters));
+
+          logger.info(`found ${imgMatches.length} cards, sending response`);
+          bot.sendMessage({
+            to: channelID,
+            message: `Cards found: ${imgMatches.length}\n\n`,
+          });
+          imgMatches.forEach(async (card) => {
+            let img;
+            try {
+              img = await fetch(`http://ringsdb.com/${card.imagesrc}`).then(res => res.buffer());
+            } catch (err) {
+              logger.error(err);
+            }
+  
+            if (img) {
+              bot.uploadFile({
+                to: channelID,
+                file: img,
+                filename: `${card.name}.png`,
+              }, (err, res) => {
+                if (err) {
+                  logger.error(err);
+                }
+              });
+            } else {
+              bot.sendMessage({
+                to: channelID,
+                message: 'Unable to retrieve image',
+              });
+            }
+          });
+
+          break;
       }
     }
   });
