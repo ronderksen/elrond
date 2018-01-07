@@ -208,3 +208,21 @@ getCardIndex().then(cardList => {
     }
   });
 });
+
+// Make heroku happy and bind a web server to $PORT
+const express = require('express');
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use((req, res) => {
+  res.end('Nothing to see here, move along');
+});
+
+app.listen(port, 'localhost', (err) => {
+  if (err) {
+    logger.error(err);
+  }
+  logger.info('server started');
+})
+
