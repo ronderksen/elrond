@@ -153,4 +153,18 @@ Promise.all([getCardIndex(), getQuestIndex()])
         }
       }
     });
+  })
+  .catch(err => {
+    logger.error(`Error getting card indexes: ${err}`);
+    logger.error(err.stack);
   });
+
+process.on('SIGTERM', () => {
+  logger.info('SIGTERM received');
+});
+
+process.on('uncaughtException', (err) => {
+  logger.error(`Uncaught exception: ${err}`);
+  logger.error(err.stack);
+  process.exit(1);
+});
