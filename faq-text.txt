@@ -1,0 +1,1583 @@
+Phase 3: Quest Page 14
+The final sentence of the first paragraph in this section
+should read: “Players have the opportunity to take
+actions and play event cards at the beginning and
+ending of each step.”
+-----
+Thalin CORE 6
+When an enemy card is revealed from the encounter
+deck, Thalin’s ability resolves before any keyword or
+“When Revealed” card effects on the encounter card.
+-----
+Eleanor CORE 8
+The replacement card is also revealed from the
+encounter deck. Resolve any “When revealed” effects
+and keywords on the new card following the standard
+game rules.
+-----
+Beravor CORE 12
+Should read: “Action: Exhaust Beravor to choose
+a player. That player draws 2 cards. Limit once per
+round.”
+-----
+Will of the West CORE 49
+Should read: “Action: Choose a player. Shuffle that
+player’s discard pile back into his deck. Remove Will
+of the West from the game.”
+-----
+Stand and Fight CORE 51
+Stand and Fight cannot return neutral allies from the
+discard pile, as neutral cards do not belong to “any
+sphere.”
+-----
+Feint CORE 34
+Should read: “Combat Action: Choose an enemy
+engaged with a player. That enemy cannot attack that
+player this phase.”
+-----
+Thicket of Spears CORE 36
+Should read: “Action: Choose a player. That player’s
+engaged enemies cannot attack that player this phase.”
+-----
+Horn of Gondor CORE 42
+Should read: “Response: After a character is destroyed,
+add 1 resource to attached hero’s pool.”
+-----
+Wandering Took CORE 43
+Should read: “(Limit once per round.)”
+-----
+Protector of Lorien CORE 70
+Should read: “Action: Discard a card from your hand
+to give attached hero +1 Ú or +1 Ò until the end of the
+phase. Limit 3 times per phase.”
+-----
+Dol Guldur Beastmaster CORE 91
+Should read: “Forced: When Dol Guldur Beastmaster
+attacks...”
+The additional shadow card is dealt when the Dol
+Guldur Beastmaster is chosen during step 1 of enemy
+attack resolution.
+-----
+Nazgûl of Dol Guldur CORE 102
+Should have the text: “No attachments can be played
+on Nazgûl of Dol Guldur.”
+-----
+The Necromancer’s Tower 1A CORE 123
+Should read: “... reveal and place them in the staging
+area.”
+-----
+Out of the Dungeons 3B CORE 125
+If a facedown Orc Guard would be returned to the
+staging area, it is instead placed in its owner’s discard
+pile.
+-----
+Boromir SoM 95
+Should read: “Raise your threat by 1 to ready Boromir.
+(Limit once per phase.)”
+-----
+Narvi’s Belt KD 3
+Should read: “Action: Exhaust Narvi’s Belt to give
+attached hero a Ì, Î, Ï, or Ê icon until the end of the
+phase.”
+-----
+Zigil Miner KD 9
+Should read: “Action: Exhaust Zigil Miner and name
+a number to discard the top 2 cards of your deck. If at
+least one of those cards has cost equal to the named
+number, choose a hero you control. For each card that
+matches the named number, add 1 resource to that
+hero’s resource pool.”
+-----
+Snow Warg D 27
+Should read: “Forced: After a character is declared as
+a defender against Snow Warg...”
+-----
+Out of the Wild D 36
+Should read: “Shuffle the encounter deck. Add Out of
+the Wild to the victory display.”
+-----
+Hama D 76
+Should read: “(Limit 3 times per game for the group.)”
+Erebor Battle Master D 79
+Should read: “Erebor Battle Master gets +1 Û for each
+other Dwarf ally you control.”
+-----
+Out of Sight D 81
+Should read: “Action: Enemies engaged with you
+cannot attack you this phase.”
+-----
+Love of Tales D 85
+Should read: “Response: After a Song card is played,
+exhaust Love of Tales to add 1 resource...”
+-----
+We Are Not Idle D 129
+Should read: “Exhaust X Dwarf heroes to add X...”
+-----
+O Elbereth! Gilthoniel! D 132
+Title should read: “A Elbereth! Gilthoniel!”
+Should read: “Response: After a non-unique enemy
+attacks you...”
+-----
+Nori OHUH 3
+Should read: “Response: After you play a Dwarf
+character from your hand, reduce your threat by 1.”
+-----
+Thrór’s Map OHUH 13
+Should read: “Travel Action: Exhaust Thrór’s Map to
+choose a location in the staging area...”
+-----
+Troll Purse OHUH 42
+Should read: “If Troll Purse is discarded, add it to the
+staging area. If Troll Purse is unattached and in the
+staging area, attach it to a Troll enemy, if able.”
+-----
+Troll Key OHUH 43
+Should read: “If Troll Key is discarded, add it to the
+staging area. If Troll Key is unattached and in the
+staging area, attach it to a Troll enemy, if able.”
+-----
+Ravens of the Mountain OtD 11
+Should read: “Action: Exhaust a hero you control to
+shuffle the encounter deck and look at its top card..."
+-----
+Expert Treasure Hunter OtD 17
+Should read: “Attach to a hero. Limit 1 per hero.”
+-----
+Secret Entrance OtD 45
+Should read: “Then, look at the top card of the
+encounter deck. If the looked at card is not...”
+-----
+Lost in the Dark 2B OtD 68
+Should read: “When Revealed: Reveal stage 3 and
+create a separate staging area for the first player using
+that stage. If there are no other players in the game,
+discard this stage and each card in its staging area. All
+other players advance to stage 4."
+-----
+A Watchful Peace HoN 12
+Should read: “Response: After a location worth no
+victory points leaves play as an explored location...”
+-----
+Master of Lore HoN 16
+Should read: “Action: Exhaust Master of Lore to name
+a card type. Lower the cost for you to play the next Î
+card of that type by 1 until the end of the phase (to a
+minimum of 1).”
+-----
+Blocking Wargs HoN 29
+Should read: “Surge. When Revealed: Deal 1 damage
+to each character committed to the quest.”
+Omit the parenthetical.
+-----
+The Power of Mordor HoN 61
+Should read: “...Reveal an equal number of cards from
+the encounter deck...”
+Omit the word “Then”
+-----
+Trained for War AtS 36
+Should read: “Action: Until the end of the phase, if the
+current quest does not have siege, it gains battle.”
+-----
+Counter-attack AtS 106
+Should read: “When Revealed: Each player must
+either return the location he controls...”
+-----
+Caldara AtS 107
+Should read: “(Limit once per game.)”
+-----
+The Ambush 1B AtS 117
+Should read: “At the beginning of the combat phase,
+each player must either turn each of his hidden cards
+faceup, or take 1 hidden card.”
+-----
+The Cross-roads AtS 123
+Should read: “The current quest card gains siege (and
+loses battle).”
+-----
+Impenetrable Fog AtS 157
+Should read: “When Revealed: The first player either
+places 3 progress tokens on To the Tower, or...”
+-----
+Blue Mountain Trader RM 6
+Should read: “Then, that player moves 1 resource from
+the resource pool of a hero he controls to the resource
+pool of a hero you control, or Blue Mountain Trader is
+discarded. (Limit once per round.)”
+-----
+Wingfoot RM 92
+Should read: “If a card of the named type is revealed
+during this quest phase, exhaust Wingfoot to ready
+attached hero.”
+-----
+Devilry of Saruman ToS 43
+Should read: “When Revealed: Place 3 progress on the
+main quest...”
+-----
+The Passage of the Marshes LoS 67
+Should read: “Setup: Each player may change hero
+cards he controls without incurring the +1 threat
+penalty. Each player shuffles 1 copy...”
+-----
+(1.00) The Golden Rule
+The Golden Rule reads: “If the game text of a card
+contradicts the text of the rulebook, the text on the card
+takes precedence.”
+The Golden Rule applies when there is a direct
+contradiction between card text and rules text. If it is
+possible to observe both card text and the text of the
+rulebook, both are observed.
+Example: The rulebook (p. 15) reads: “Any progress
+tokens that would be placed on a quest card are instead
+placed on the active location.” Legolas (CORE 5) has
+an effect that reads, “...place 2 progress tokens on the
+current quest.” Legolas’ effect would place 2 progress
+tokens on the quest; the core rule from page 15 instead
+places those tokens on the active location. Thus, the
+Legolas ability can successfully resolve, and the core
+rule can be observed, without creating a golden rule
+situation.
+(If a card effect read, “place a progress token on the
+current quest, bypassing any active location,” a direct
+contradiction between card text and rulebook would be
+created, and the golden rule would then take effect.)
+-----
+(1.01) Encounter Keywords
+Surge, Doomed, and Guarded keywords should be
+resolved any time the card on which they occur is
+revealed from the encounter deck, including during
+setup.
+-----
+(1.02) Simultaneous Effect Timing
+If two or more conflicting effects would occur
+simultaneously, the first player decides the order in
+which the effects resolve.
+Example: Tom plays Sneak Attack (CORE 23) to
+put Beorn (CORE 31) into play during the combat
+phase. Sneak Effect has the condition, “At the end of
+the phase, if that ally is still in play, return it to your
+hand.” During combat, Tom uses Beorn’s triggered
+effect, which has the condition, “At the end of the
+phase in which you trigger this effect, shuffle Beorn
+back into your deck.” At the end of the phase, a
+situation arises in which two conflicting effects are
+attempting to resolve simultaneously on Beorn. The
+first player determines which of the two effects resolves
+first. (The second effect no longer applies when Beorn
+leaves play.)
+-----
+(1.03) Conflicting Effect Targeting
+If an encounter or quest effect attempts to target a
+single player or card, and there are multiple eligible
+targets, the first player selects the target of the effect
+from among the eligible options.
+Example: The card Caught in a Web (CORE 80) has an
+effect that reads, “The player with the highest threat
+level attaches this card to one of his heroes.” Tom and
+Kris are tied for the highest threat level when Caught
+in a Web is revealed, so the first player determines
+whether the card affects Tom or Kris.
+-----
+(1.04) Damage and Multiple Defenders
+If a player uses card effects to declare multiple
+defenders against a single enemy attack, the defending
+player must assign all damage from that attack to a
+single defending character.
+-----
+(1.05) Removing Progress Tokens from Quests
+When a card effect removes progress tokens from a
+quest or quest card, the effect applies specifically to the
+quest card, and never to the active location.
+-----
+(1.06) Control of Non-objective Encounter Cards
+Players do not gain control of encounter cards unless
+control of the card is explicitly granted by a card
+effect. When an encounter card (such as Caught in a
+Web, CORE 86) becomes an attachment and attaches
+to a character, that character’s controller does not gain
+control of the attachment.
+-----
+(1.07) Control of Objective Cards
+When a player claims an objective card, he gains
+control of that card unless otherwise directed by a card
+effect.
+-----
+(1.08) Responses per Trigger
+If a response or forced response is triggered, the effect
+can only occur once per trigger.
+Example: Theodred (CORE 2) reads, “Response: After
+Theodred commits to a quest....” This effect can only be
+triggered once each time Theodred commits to a quest.
+-----
+(1.09) Forced Responses
+Forced responses resolve immediately when their
+specified prerequisite occurs, and before any response
+effects that also can be triggered off the same
+prerequisite.
+Example: Tower Gate (CORE 107) reads, “Forced:
+After travelling to Tower Gate....” If a player wishes
+to play a response such as Strength of Will (CORE 47)
+after the players travel to Tower Gate, he must wait
+until after the forced response resolves.
+-----
+(1.10) Limitations on Actions
+Actions are only limited by whether or not a player can
+pay the cost of the action, or by built in limitations on
+the card itself, such as “limit once per round.”
+Example: Protector of Lorien (CORE 70) reads,
+“Action: Discard a card from your hand to....” This
+action may be triggered three times per phase, as long
+as the card’s controller has cards in hand to discard.
+-----
+(1.11) Limitations on Attacks
+When a player is the active attacker during the combat
+phase, the game rules grant him the option to declare
+1 attack against each enemy with which he is engaged.
+If, through card effects such as ranged, a player is able
+to declare attacks against enemies with which he is not
+engaged, the game rules still only provide for a single
+attack against each of these enemies.
+However, if a player makes an attack against an enemy
+by a card effect such as Quick Strike (CS 35) or Hands
+Upon the Bow (D 131), that is an extra attack and does
+not count against the limit of 1 attack.
+-----
+(1.12) Exhaustion and Attachments
+Attachments and the card to which they are attached
+exhaust and ready independent of one another.
+Example: Steward of Gondor (CORE 26) reads,
+“Action: Exhaust Steward of Gondor to....” Using
+this action only exhausts the Steward of Gondor card,
+not the hero to which it is attached. Additionally,
+exhausting the hero to which Steward of Gondor is
+attached does not exhaust the Steward of Gondor card.
+-----
+(1.13) Characters and Enemies
+“Character” refers to both hero and ally cards. Enemy
+cards are not considered characters.
+-----
+(1.14) The word “cannot”
+If a card effect uses the word “cannot”, then it is an
+absolute: that effect cannot be overridden by other
+effects.
+(1.15) The word “then”
+If a card effect uses the word “then,” then the preceding
+effect must resolve successfully for the subsequent
+dependent effect to resolve.
+-----
+(1.16) The phrase “put into play”
+If a card effect uses the phrase “put into play,” it means
+that the card enters play through a card effect instead
+of through the normal process of paying resources and
+playing the card from hand. “Put into play” effects
+are not considered to be playing the card, and will not
+trigger any effects that refer to a card being played.
+“Put into play” will, however, trigger any effects that
+occur when a card “enters play”.
+Example: The quest Through the Caverns (CORE 124)
+has the text, “The players, as a group, cannot play
+more than one ally card each round.” While this quest
+is active, a player can put an ally into play with Stand
+and Fight (CORE 51), even if an ally has already been
+played this round.
+-----
+(1.17) Unclaimed Objectives
+An unclaimed objective is one that is not currently
+claimed and under the control of a player. An
+unclaimed objective can be guarded or unguarded.
+A guarded objective is treated like an attachment if
+guarded by an enemy or location, and remains attached
+to that card until it leaves play, at which point it will
+return to the staging area. Any unclaimed objective
+in the staging area that is not attached to a card is
+considered to be unguarded. If an objective is claimed
+at one point, and then returns to the staging area, it
+regains the status of unclaimed.
+-----
+(1.18) Explored Locations Leaving Play
+A location card is immediately discarded from play
+any time it has as many progress tokens as it has quest
+points, whether it is active or not.
+-----
+(1.19) Card Effects during Setup
+“When Revealed” effects are resolved if the cards are
+revealed during setup. A player can trigger responses
+during setup, following the normal game rules. Players
+cannot take Actions during setup.
+“When Revealed” effects that last “until the end of the
+phase” will last until the end of the first resource phase.
+Effects that last “until the end of the round”, will last
+until the end of the first round.
+-----
+(1.20) Engaged Enemies
+During the quest phase, engaged enemies do not count
+their threat for the staging area.
+An enemy remains engaged with a player until it is
+defeated or until a card effect returns it to the staging
+area, engages it to another player, or removes it from
+play.
+-----
+(1.21) Search Effects
+Whenever a player searches through a deck, that player
+shuffles the deck after searching it unless a card effect
+says otherwise. Players do not shuffle or change the
+order of a discard pile after searching it.
+-----
+(1.22) “When Revealed” Effects
+A card is only considered to be revealed if the card or
+game effect causing the card to enter play specifically
+uses a form of the word “reveal”.
+Example: If the players use the Stage 3b “Don’t Leave
+the Path!” (CORE 121) quest card effect to search
+for a King Spider and put it into play, the “When
+Revealed” effect on the King Spider will not trigger,
+since the effect on “Don’t Leave the Path!” does not
+specifically use a form of the word “reveal.”
+-----
+(1.23) Attachments
+Any objective card that attaches to another card is
+treated as an attachment in addition to its other card
+types.
+Any non-objective card that attaches to another card
+loses its original card type and gains the attachment
+card type.
+The “Attach to...” rules text on an attachment is only a
+play restriction, and is not taken into account after the
+card is already attached.
+-----
+(1.24) Questing Successfully
+Questing successfully and the physical placement of
+progress tokens are two separate game occurrences
+that happen in sequence during the Quest Resolution
+step. As soon as the players determine that the total
+committed Willpower is greater than the total Threat in
+the staging area, they are considered to have quested
+successfully. Any Forced or passive effects initiated by
+questing successfully resolve before physically placing
+progress tokens.
+Example: Tom has just successfully quested during
+stage 1B of The Hunt Begins (SoM 11), and he will be
+placing enough progress to advance to the next stage.
+However, he must first resolve the Forced effect (which
+resolves immediately upon the occurence of “questing
+succesfully”) before placing progress tokens on the
+quest.
+-----
+(1.25) Collecting, Adding, Moving, and Gaining
+Resources
+Collecting resources refers to both collecting resources
+during the resource phase and gaining resources
+through other card effects. An effect that prevents a
+hero from collecting resources prevents both methods
+of acquiring new resources.
+Adding a resource to a hero’s pool is the act of taking a
+resource from the token bank and placing it in that hero’s
+pool. Adding a resource always results in the total number
+of resources controlled by the players being increased.
+Moving a resource is the act of taking a resource from one
+hero’s pool and placing it in another hero’s pool. This does
+not count as ‘adding’ a resource because it did not take a
+new resource from the token bank and the total number of
+resources controlled by the players did not increase.
+Gaining a resource is a blanket term that includes
+collecting, adding and moving. Any time the number
+of resources in a hero’s pool is increased, that hero has
+gained one or more resources.
+-----
+(1.26) The word “switch”
+In order for a switch to occur, switched items must
+exist on both sides of the switch.
+-----
+(1.27) Bypass the active location
+The only time an active location does not act as a
+buffer for progress to be placed on a quest is when card
+text specifically instructs the players to “bypass” the
+active location.
+-----
+(1.28) Enemy attacks outside of the combat phase
+If an enemy attacks outside of the combat phase, it is
+still dealt a shadow card at the beginning of the attack.
+Then follow the 4 steps under Phase 6 “Combat” in
+the rules. There is an action window after each step.
+Any shadow cards dealt to the attacking enemy are
+discarded after the attack resolves.
+-----
+(1.29) Victory Display
+The victory display is a game area where victory points
+are tracked. Cards in the victory display are considered
+to be out of play, but are not considered to be a part of
+the encounter discard pile. Cards in the victory display
+are not considered “removed from game,” and some
+card effects may still interact with them.
+-----
+(1.30) “First Player” elimination
+If the player with the first player token is eliminated,
+the first player token immediately passes clockwise to
+the next eligible player.
+-----
+(1.31) Self-referential effects
+If a card refers to its own title in its text it should be
+read as referring only to that copy of the card. A card
+that refers to other copies of itself will use the language
+“any copy of...” or “another copy of...” or “a card with
+the title...”
+6
+-----
+(1.32) Mid-Attack Control or Engagement Change
+If a card involved in combat changes control, is
+returned to the staging area, or engages another player
+during the resolution of an attack, that attack still
+resolves with the card still participating from its new
+state.
+-----
+(1.33) Attacks by non-engaged enemies
+When an enemy attacks a player, that player may
+declare 1 defender whether the enemy is engaged with
+him or not. Sentinel may also be used to defend against
+such attacks.
+-----
+(1.34) Two active locations
+If a card effect causes two locations to be active at the
+same time, they are both considered to be the active
+location. However, when a card effect targets “the
+active location,” it does not target both active locations
+at the same time. The first player must choose which of
+the active locations the effect will target. Both active
+locations serve as buffers for the quest stage and when
+placing progress on the active location, the players
+may divide that progress among both active locations
+however they choose.
+-----
+(1.35) “Enters the staging area”
+Enters the staging area is a term that applies to a card
+(enemy, location, objective, etc) that is placed in the
+staging area. This term applies whether the card in
+question has been revealed from the encounter deck,
+placed in the staging area from out of play, returned
+from the discard pile or from engaged with a player, or
+by other means.
+-----
+(1.36) Triggered abilities vs. Passive abilities
+Triggered abilities are abilities on cards that have a
+bold trigger word such as Action or Response. These
+abilities are only applied when they are triggered.
+Passive abilities are abilities on cards that have an
+ongoing effect without a bold trigger word. Because
+passive abilities don’t have a trigger they are always
+active and cannot be “triggered”.
+-----
+(1.37) Timing of effect resolution
+When resolving multiple effects with a shared
+condition, players should use this order of resolution:
+passive abilities first, Forced effects second, Response
+actions third. When determining the order of effect
+resolution among abilities within those categories,
+players should first resolve abilities that use the word
+“when” and then resolve abilities with the word “after”.
+A player card effect that cancels an encounter card
+effect interrupts this timing structure. A cancel effect
+must be triggered immediately after the encounter card
+effect that it cancels.
+-----
+(1.38) Control of attachments
+When a player plays an attachment on a character
+controlled by another player, that character’s controller
+gains control of the attachment. When a player plays
+an attachment into the staging area, or on an enemy or
+location, that player retains control of that attachment.
+-----
+(1.39) Staging objective cards
+When a player reveals an objective from the encounter
+deck, he adds it to the staging area unless that objective
+instructs the player to do something different.
+-----
+(1.40) The letter X
+Unless specified by a card effect, or granted player
+choice, the letter "X" is equal to 0.
+-----
+(1.41) Attacks against a character
+An attack made against a character works the same as
+an attack made against a player with one exception:
+undefended damage from an attack against a character
+must be assigned to that character.
+For example: Bilbo Baggins (OtD 1) has the most
+poison attached when Crazy Cob (OtD 29) is revealed
+from the encounter deck and its "When Revealed"
+effect triggers an attack against the character with
+the most poison attached. Even though the first player
+controls 3 other heroes, any undefended damage from
+this attack must be applied to Bilbo Baggins. Because
+Bilbo is already exhausted from committing to the
+quest, he cannot exhaust to defend himself and will be
+killed if the attack is undefended. Knowing this, the first
+player chooses to exhaust one of his ready characters,
+Bombur, to declare him as the defender for this attack.
+At this point, the attack resolves as normal and any
+damage from the attack is applied to Bombur.
+-----
+(1.42) Additional attacks by an enemy
+When an enemy makes an additional attack, discard all
+of its previously dealt shadow cards before dealing it a
+new shadow card.
+-----
+(1.43) Modifiers of variable quantities
+The game state constantly checks and (if necessary)
+updates the count of any variable quantity that is being
+modified. Any time a new modifier is applied, the
+entire quantity is recalculated, considering all active
+modifiers.
+A quantity cannot be reduced below zero: a card cannot
+have “negative” cost, stats, keywords, etc.
+-----
+(1.44) “Must X or Y” vs “must either X or Y”
+If a card instructs a player to perform one task or
+perform a second task using the structure “... must X or
+Y...” then the player must attempt to perform the first
+task, and performs the second task instead only if the
+first task cannot be performed.
+If a card instead uses the structure “... must either X or
+Y...” then the player may choose which task to perform,
+although one of them must be performed in full, if able.
+7
+-----
+(1.45) “Reveal” vs “Reveal and add”
+Any time encounter cards are “revealed” from the
+encounter deck, the players should follow the rules for
+staging as explained on page 14 of the rulebook and
+rule (1.39) of this document.
+If a card effect uses the phase “Reveal and add to the
+staging area”, it means the same as simply using the
+word “reveal”, and the above steps should still be
+followed (i.e. treachery cards should still be discarded
+after resolving its effects, unless otherwise indicated by
+the card’s text).
+-----
+(1.46) “Next” player
+If there is only one player in the game, there is no next
+player. Card effects that target the “next” player will
+not trigger if there is only one player in the game.
+For example: The shadow effect of Pathless Country
+(TBR 72) reads: “Shadow: After this attack, the
+attacking enemy engages the next player then makes
+an immediate attack.” If there is only one player
+in the game, there is no next player to engage. The
+word “then” indicates that the immediate attack is
+conditional on the attacking enemy engaging the next
+player, so the enemy will not make an immediate attack.
+-----
+(1.47) “Immune to player card effects”, expanded
+Cards with the text “Immune to player card effects”
+ignore the effects of all player cards. This means
+that player card effects cannot directly influence or
+interact with a card that is immune to player card
+effects. Examples include dealing damage to an enemy,
+placing progress on a location, altering a card’s text or
+statistics, moving a card, engaging an enemy, traveling
+to a location, or discarding a card.
+However, a card that is immune to player card effects
+can still be affected by normal framework effects
+such as placing progress from questing successfully,
+engaging an enemy during the encounter phase, or
+dealing damage through an attack made by a character.
+For example: Pippin’s (TBR 4) passive ability cannot
+increase the engagement cost of an enemy that is
+immune to player card effects, because that enemy
+will ignore Pippin’s effect. However, if you engage an
+enemy who is immune to player card effects and has
+an engagement cost higher than your threat, you may
+still use Pippin’s Response to draw a card, because this
+response is not affecting the enemy in any way.
+Additionally, cards that are immune to player card
+effects cannot be chosen as targets of player card
+effects. This means that any player card that uses a
+form of the words “target” or “choose” cannot choose
+a card that is immune to player card effects as its
+target. This includes the “attach to...” text of any player
+attachment. Player cards that do not use the word
+“target” or “choose” but force the player to choose a
+specific card cannot choose a card that is immune to
+player card effects.
+For example: Hands Upon the Bow (D 131) cannot be
+used to attack an enemy that is immune to player card
+effects, because it clearly indicates that the player must
+pick an enemy in the staging area to attack. This is
+different from Quick Strike (Core 35), which targets a
+character and allows them to perform a normal attack,
+which is a framework effect.
+-----
+(1.48) Discarding cards vs placing cards in the
+discard pile
+When a character is destroyed, or an event card is played,
+it is placed in the discard pile. This is not the same as
+being “discarded.” Cards are only discarded when a card
+effect instructs a player to discard a card.
+-----
+(1.49) Engaging enemies vs being engaged
+When a player engages an enemy, that enemy has also
+engaged him, and when an enemy engages a player, that
+player has also engaged that enemy. There is no difference
+between engaging an enemy and being engaged by an
+enemy. Effects that trigger “after an enemy engages you”
+will trigger at the same time as effects that trigger “after
+you engage an enemy.”
+-----
+(1.50) “Considered to be engaged” vs actual
+engagement
+An enemy that does not leave the staging area but is
+considered to be engaged with a player does not actually
+engage that player, nor does that player engage it. In order
+for a player to engage an enemy, the enemy card must
+physically enter his play area.
+For example: Durin’s Bane (D 150) cannot leave the
+staging area and is considered to be engaged with two
+players. Player 1 has Mablung (RM 84) and wishes
+to trigger his Response effect, but he cannot because
+he has not actually engaged Durin’s Bane. Player 2
+wishes to play Feint (CORE 34) to prevent Durin’s Bane
+from attacking him. He can, because Durin’s Bane is
+considered to be engaged with him.
+-----
+(1.51) Limitations on card effects
+When a card with a triggered effect has a limit on the
+number of times that effect can be triggered (i.e. “Once
+per round,” “Limit 3 times per phase,” etc.), the limit
+is specific to that card. However, if a card has a limit of
+“once per game,” that limitation is specific to the player
+who triggered it.
+8
+-----
+(1.52) “The defending player”
+When an enemy makes an attack against a player, or
+a character controlled by a player, that player is “the
+defending player” regardless of whose character is
+declared as a defender. Card effects, including shadow
+card effects, that target “the defending player” or “you”
+still target the player who the enemy is attacking even if
+another player declares one of his characters as a defender
+for that attack.
+-----
+(1.53) Canceling an encounter card effect
+When an encounter card effect is canceled, the game
+proceeds as if that encounter effect was never triggered.
+The rest of the encounter card is resolved as normal.
+For example: If a player plays A Test of Will (CORE
+50) to cancel the ‘when revealed’ effect of Dark Sorcery
+(TLR 65), each player must still raise his threat by 2 for
+the Doomed 2 keyword on Dark Sorcery. Additionally,
+any effects that triggers after a card with the Sorcery
+trait is revealed will still trigger because Dark Sorcery
+has the Sorcery trait, and even though its ‘when
+revealed’ effect was canceled, the card itself was still
+revealed.
+-----
+(1.54) Canceling an encounter card
+When an encounter card is canceled, the game proceeds as
+if that encounter card was never revealed, except for it still
+fulfills that encounter card reveal. Effects that would have
+triggered in response to the canceled encounter card being
+revealed cannot be triggered.
+For example: If a player plays The Door is Closed (AA
+92) to cancel Dark Sorcery (TLR 65), the Doomed 2
+keyword on Dark Sorcery will not trigger, nor will any
+effects that trigger after a card with the Sorcery trait
+is revealed, because the entire encounter card was
+canceled.
+-----
+(1.55) Lasting Effects
+There are two classes of lasting effects in the game: those
+created by player cards and those created by encounter
+cards. Each class is handled differently as follows:
+A lasting effect created by a player card ability must be
+calculated at the time that the ability is triggered, and that
+effect is not recalculated if the game state changes.
+For example: If a player triggers the Quest Action
+on Nenya (RM 121) to add Galadriel’s (RM 112) 4
+willpower to another hero until the end of the phase, that
++4 willpower bonus will not be recalculated if Galadriel’s
+willpower is increased later that phase.
+A lasting effect created by an encounter card ability, is
+recalculated if the game state changes.
+For example: Part of the ‘when revealed’ ability on
+Poisoned Vapour (ToS 61) reads: “Until the end of the
+combat phase, treat each damaged character’s text box
+as if it were blank (except for Traits).” If Aragorn (ToS 1)
+had 1 damage at the time Poisoned Vapour was revealed,
+his text box would be treated as if it were blank. However,
+if that damage was healed, his text box would no longer
+be considered blank. If he was damaged again, his text
+box would be treated as if it were blank until the end of the
+combat phase.
+-----
+(1.56) “Cannot have attachments”
+The text “cannot have attachments” is absolute. It is
+possible to play attachments on a card with this text while
+its text box is considered to be blank, but any attachments
+on that card must be discarded immediately the moment
+its text is active again.
+-----
+(1.57) Threat elimination
+A player is immediately eliminated from the game the
+moment his threat reaches his threat elimination level
+regardless of card effects in play.
+For example: A player who has played Vanish from Sight
+(DC 11) treats his threat as if it was 20 until the end of the
+phase, but if his threat dial reaches his threat elimination
+level, he is still immediately eliminated from the game.
+-----
+(1.58) Triggering Forced effects
+A Forced effect must be in play and active at the time
+its trigger occurs in order to resolve its effect. If the
+resolution of another effect causes a Forced effect to enter
+play or become active after its triggered has occured, that
+Forced effect is not resolved.
+For example: Stage 1B of Helm’s Deep reads: “Forced:
+At the end of the round, advance to stage 2A,” and stage
+2B reads “Forced: At the end of the round, place 1
+progress here for each enemy in the staging area.” When
+the end of the round triggers, the players resolve the
+Forced effect on stage 1 and advance to stage 2, but they
+do not resolve the Forced effect on stage 2B because it
+was not in play when the end of the round triggered.
+-----
+Expert Game
+This section elaborates upon the “expert game” variant
+that is introduced on page 27 of the Core Set rulebook.
+When playing the “expert game” variant each player’s
+threat, wounds, and discard pile do not reset when
+setting up a new scenario.
+To reset the other game elements at the beginning of
+a new “expert game” scenario, perform the following
+steps in order:
+1) All non-hero cards in play and in hand are shuffled
+into their owner’s decks. All encounter cards are
+returned to their encounter sets so they are available
+for the next scenario, if needed. This includes cards in
+players’ victory display.
+2) All unspent resources are discarded from the heroes’
+resource pools.
+3) Each player draws a new starting hand per the
+regular setup rules of the game. A single mulligan may
+be taken by each player at this time.
+4) A player cannot start a scenario with a threat level
+that is lower than the combined threat cost of his
+heroes. If a player’s threat is lower than the starting
+threat cost of his heroes, he must increase his threat to
+that value.
+5) Follow all setup instructions for the new scenario.
+Each scenario should be scored separately, and then all
+the scores added together at the end of the variant.
+Scoring
+This section introduces an additional element to the
+scoring system presented on page 22 of the core
+rulebook. This revised scoring will be implemented at
+all FFG sanctioned organized play events, and should
+be used on the LOTR LCG Quest Log available at
+FantasyFlightGames.com.
+In addition to all elements currently used to score a
+game, players also add an additional 10 points to their
+“final group score” for each round of play that is taken
+to defeat a scenario. Players tally each round for their
+score at the end of the refresh phase.
+A modified scoring sheet has been provided as the
+final page of this document. The tally of rounds can be
+tracked on the notes section of these sheets.
+Frequently Asked Questions
+This section applies to material covered in previous
+sections, in the core rulebook, and in Adventure Pack
+inserts. It answers some of the most frequently asked
+questions that arise while playing The Lord of the
+Rings: The Card Game.
+-----
+Q: If the players do not commit any characters to a
+quest, does the staging area still count its threat against
+them?
+A: Yes, the threat in the staging area still counts
+against the players, who have a combined committed
+willpower of 0.
+-----
+Q: Does a player commit his characters to a quest at
+once, or one character at a time? When can a player
+trigger responses to committing his characters to a
+quest?
+A: A player commits all characters he wishes to
+commit to a quest at once. Responses to the characters
+committing (such as those on Aragorn and Theodred)
+can then be triggered in the order of that player’s
+choice. After a player has committed his characters
+(and triggered any responses to those characters
+committing), the next player has the opportunity to
+commit his characters to the quest.
+-----
+Q: Does the effect on Legolas (CORE 5) place progress
+tokens on an active location, if there is one?
+A: Yes. Always place progress tokens on an active
+location instead of the quest, unless the ability
+specifically states to bypass any active location.
+-----
+Q: When do “after this enemy attacks” Forced effects
+like those on Chieftan Ufthak (CORE 90) and Wargs
+(CORE 85) resolve?
+A: These effects resolve immediately after step 4 of
+enemy attack resolution.
+-----
+Q: Can a player have cards in his player deck from
+a sphere that doesn’t match the sphere of one of his
+heroes?
+A: There is nothing in the rules that disallows this,
+although a player will need to find clever card
+interactions to make use of such cards.
+-----
+Q: Does Dungeon Jailer (CORE 101) shuffle guarded
+objectives back into the encounter deck?
+A: Yes. Dungeon Jailer will shuffle any unclaimed
+objective, whether or not it is guarded.
+-----
+Q: Can a player use a response effect like the one on
+Eleanor (CORE 8) during setup?
+A: Yes. Responses can be triggered at any time they
+meet their specified prerequisite, including during
+setup.
+10
+-----
+Q: Do the Orc Guards generated by the effects of the
+Tower Gate location card and the Out of the Dungeons
+quest card have the Orc Trait?
+A: No. Face down cards do not have traits unless the
+trait is gained through a card effect.
+-----
+Q: When should Feint (CORE 34) be played?
+A: This card should be played any time before
+resolving step 1 of the target enemy’s attack during the
+combat phase. (Once the act of resolving an enemy’s
+attack begins, it is too late to prevent it from attacking
+with Feint.)
+-----
+Q: In what order is players’ optional engagement
+handled?
+A: The first player has the first opportunity to
+optionally engage an enemy, or pass. After that, each
+player, moving clockwise, has the option to engage one
+enemy. Once each player has had this opportunity, this
+step is complete.
+-----
+Q: What happens to Banks of the Anduin (CORE 113)
+if it is drawn as a Shadow card?
+A: It will be discarded from play at the end of the
+combat phase, like other Shadow cards. When a card
+is drawn as a Shadow card, only its Shadow text is
+considered to be active.
+Q. If Wolf Rider (CORE 81) is drawn as a Shadow
+card, when is it returned to the top of the encounter
+deck?
+A: “After combat” refers to the end of the combat
+phase, when Shadow cards normally leave play.
+Q. If I cancel the Shadow effect on a card dealt to the
+Nazgûl of Dol Guldur (CORE 102), is the effect still
+considered to have resolved, making me discard a
+character?
+A: No. Resolving an effect means that the effect
+triggered and resolved to the fullest extent possible.
+Canceling the effect will prevent the Nazgûl of Dol
+Guldur’s ability from triggering, just as if the card had
+no Shadow effect to begin with.
+Q. Does a player with the Dungeon Torch (CORE 109)
+raise his threat by 2 or 3 during the refresh phase?
+A: Dungeon Torch’s effect does not replace the regular
+1 threat raise, but adds to it. So the player with the
+Dungeon Torch raises his threat by 3.
+Q. If Legolas has a Blade of Gondolin (CORE 39) and
+destroys an enemy, can he trigger his response, finish
+off a quest card, and still place progress tokens on the
+next quest with the Blade of Gondolin’s response?
+A: Yes. Quest cards are immediately replaced as
+soon as players place enough progress on them,
+and this replacement does not interrupt the current
+round sequence. If the current quest card only needs
+1 progress on it, then a player could also trigger
+the Blade’s effect first, and then Legolas’ in order to
+maximize the number of progress tokens placed. (There
+is no carry-over progress from an effect).
+-----
+Q: How does a player resolve the situation in which
+a single hero has multiple copies of Caught in a Web
+(CORE 80) attached?
+A: The player must pay for each copy of Caught in a
+Web before the hero can ready. Each copy of the card
+creates an independent condition that must be fulfilled
+before readying the attached hero, so if each condition
+is not fulfilled the hero cannot ready. End result, if a
+hero has two copies of Caught in a Web attached, the
+player will have to pay 4 resources from that hero’s
+resource pool in order to ready the card.
+-----
+Q: If players have placed progress tokens on a quest
+equal to its quest points, but a game effect prevents
+them from advancing, can they continue to place
+progress tokens on the quest?
+A: Yes. There is no upper limit to how many progress
+tokens may be placed on a quest.
+-----
+Q: Can characters with the ranged keyword participate
+in an attack declared through the card Quick Strike
+(CORE 35)?
+A: No. There is no opportunity for other characters to
+join a Quick Strike attack. One character is exhausted
+to pay for the cost of Quick Strike, and the effect is that
+the exhausted character is immediately declared as an
+attacker against the target enemy. The card’s resolution
+does not allow for a standard declaration step in which
+other characters can declare.
+-----
+Q: Wilyador (SoM 64) cannot be healed of more than
+5 wounds by a single effect, so how do I resolve the
+“when revealed” text on Return to Rhosgobel 3B (SoM
+62)?
+A: Heal 5 wounds from Wilyador for each Athelas
+objective card as its own separate action.
+-----
+Q: Can Brand son of Bain (SoM 72) trigger his
+response if he participates in a ranged attack that
+defeats an enemy engaged with another player instead
+of declaring the attack himself ?
+A: Yes. Declaring an attack and participating in an
+attack are both subsets of attacking. In both cases
+Brand attacks and can trigger his response if the enemy
+is defeated. 
+11
+-----
+Q: If a Sacked! (SoM 48) card is placed on a hero
+while that hero is questing is that hero removed from
+the quest?
+A: No. Sacked! specifies only that the hero cannot
+commit to the quest, and the hero is already committed.
+However, the hero cannot commit to quests on future
+rounds while Sacked! is attached.
+-----
+Q: If Eleanor (CORE 8) is used to cancel the “when
+revealed” effects of a treachery card, are any surge or
+doomed keywords on that card also canceled?
+A: No. Eleanor only cancels the “when revealed”
+effects of the treachery card. Any surge or doomed
+keywords on the card resolve before the new
+(replacement) card is revealed.
+-----
+Q: Is Against the Trolls (SoM 32) the final stage of
+Conflict at the Carrock?
+A: Yes.
+-----
+Q: What happens if Wandering Took (CORE 43)
+changes control between players during combat after
+being declared as a defender?
+A: As nothing removes Wandering Took from the
+combat or from play, it remains declared as a defender
+against the attack. (The “defending player” does not
+change, even though control of the defending character
+has changed.)
+-----
+Q: If a player is eliminated during the staging step of
+the quest phase, before all encounter cards are revealed,
+does the elimination reduce the number of cards that
+should be revealed for staging?
+A: The base number of cards to be revealed is
+determined at the beginning of the staging step, and
+does not change if a player is eliminated during
+staging.
+-----
+Q: If all of a player’s heroes (except for the captured
+hero) are destroyed during the Escape from Dol Guldr
+scenario, is that player eliminated from the game?
+A: Yes, the player is eliminated, and the players (as a
+group) have lost.
+-----
+Q: When paying for a Creature with resources
+from Radagast’s (SoM 59) pool, is a resource match
+required?
+A: No. Radagast’s ability breaks the need for a resource
+match if the resources are coming only from his pool.
+(If combining his resources with resources from a
+hero’s pool, the hero’s sphere must match the sphere of
+the Creature being played.)
+-----
+Q: If I can’t discard 3 resources from all of my heroes
+due to Bitter Wind (KD 56), do I have to partially fulfill
+the effect?
+A: Yes, players should resolve as much of any
+“discard” effect as they are able to.
+-----
+Q: If a player does not declare any defenders against an
+attack, is he still considered the defending player?
+A: Yes, the player an enemy is attacking is considered
+to be the defending player. Whether or not he declares
+defenders, and whether or not any other player
+declares defenders for him, does not change his status
+as the defending player for the attack.
+-----
+Q: If A Light in the Dark (CORE 52) is played midattack
+(e.g. after defender is declared), does the act of
+returning it to the staging area immediately end the
+attack because the enemy is no longer engaged with
+any player?
+A: No. A Light in the Dark does not cancel or stop an
+attack that is already in the process of resolution. The
+only step in which the enemy needs to be engaged with
+the attacked player is step 1 of the Combat phase. So,
+in order to prevent an attack, A Light in the Dark must
+be played on an engaged enemy prior to choosing to
+resolve its attack during step 1.
+-----
+Q: Can I use Son of Arnor (SoM 15) to engage The
+Watcher (DD 72), even though The Watcher reads
+“...cannot be optionally engaged”?
+A: Yes. The ability on Son of Arnor does not count as
+optionally engaging The Watcher. Optional engagement
+only occurs during step 1 of the Encounter phase.
+-----
+Q: If Caradhras (DD 15) is in my victory display when
+I complete stage 2 of The Redhorn Gate, will it become
+the active location even though it is not in play?
+A: Yes. You will remove Caradhras from your victory
+display and put it back into play as the active location.
+Cards in the victory display are not removed from the
+game and can still be referenced by effects. If players
+get too far ahead of themselves via card effects, they’ll
+find a return journey is necessary!
+-----
+Q: If there are two copies of Pelennor Fields (MaO
+10) in the staging area and I travel to one of them, do
+I still have to raise my threat by 3? What if I have the
+opportunity to travel and travel to neither of them?
+A: If a card is self-referential, it refers only to that copy
+of itself. So if you travel to one copy of the Pelennor
+Fields, the other copy will raise your threat by 3
+because it only takes into account whether you traveled
+to that particular copy of the Pelennor Fields. So if you
+travel to neither copy, they both resolve and you must
+raise your threat by 6.
+12
+-----
+Q: When an enemy makes an attack against me from
+the staging area, can I declare a defender?
+A: Yes. If an enemy attacks you, you can exhaust
+1 character you control to declare it as a defender
+against that attack, whether that enemy is engaged with
+you or not.
+-----
+Q: What is the difference between “adding” a card to
+the staging area versus “placing” a card in the staging
+area?
+A: There is no difference between “adding” a card to
+the staging area versus “placing” a card in the staging
+area. These words are used interchangeably and mean
+the same thing in all instances.
+-----
+Q: Are attachments already in play discarded when
+Amon Lhaw (SoM 84) becomes the active location?
+A: No. Attachments only check play restrictions when
+entering play. Attachments already in play will stay
+attached.
+-----
+Q: When players have separate staging areas at stage 4
+of Foundations of Stone, can there be multiple copies
+of unique cards in play?
+A: No. Players must still respect the rules for playing
+unique cards when they are split up. For example, if a
+player has Gandalf (CORE 73) in play, then no other
+player can play Gandalf.
+-----
+Q: How does the card Lost and Alone (DD 124) work?
+What if the hero gets attached to a Nameless Thing
+(DD 125) or was my last hero in play?
+A: You only put the lost hero back into play if you draw
+the hero, whether during the resource phase or through
+a card effect. If the hero is discarded or attached to a
+card like a Nameless Thing, then treat it like any other
+card. In the latter situation, the value of the hero would
+be null, since it has no printed cost. If your last hero
+gets shuffled into your deck you are not eliminated from
+the game; heroes are not considered to be killed unless
+they are in your discard pile. You will continue playing
+until you either draw the hero, are eliminated through
+other means, or the game ends.
+-----
+Q: When I play We Are Not Idle (D 129) and exhaust
+Bombur (OtD 5), do I get 2 resources?
+A: No. Bombur’s ability only works with cards that
+count the number of Dwarf characters you control. If
+you choose to exhaust Bombur with We Are Not Idle,
+you are still only exhausting 1 Dwarf character and
+will therefore only receive 1 resource.
+-----
+Q: When I use the ability on Vilya (D 109) to play a
+card, do I still need a resource match?
+A: No. Playing a card at “no cost” is different from
+playing a card for “0 cost.” A 0 cost card still requires
+a resource match, however, playing a card at “no cost”
+removes the need for a resource match.
+-----
+Q: If an attachment gives a permanent stat bonus,
+does that bonus still apply when the attachment is
+exhausted?
+A: Yes. Exhausting an attachment does not negate
+any permanent bonus that attachment grants to the
+attached character.
+-----
+Q: If there is an active location with the text "Immune
+to player card effects" when Legolas participates in an
+attack that destroys an enemy, do I place 2 progress on
+the active location or the quest?
+A: No. When Legolas' ability would put progress on
+the current quest, if there is an active location, it puts
+progress on that location instead. If that location is
+immune to player card effects, it ignores Legolas'
+ability. Therefore, no progress would be placed on the
+active location or the current quest.
+-----
+Q: If an enemy does not attack or its attack is canceled,
+what happens to its shadow card(s)?
+A: At the end of the combat phase, discard each
+unresolved shadow card in play. (Do not resolve the
+effects on these shadow cards)
+-----
+Q: If a location is revealed after Treacherous Fog
+(CORE 118) was revealed during the same quest phase,
+does the revealed location get +1 $ from the “When
+Revealed” effect on Treacherous Fog?
+A: Yes. The “When Revealed” effect on Treacherous
+Fog creates a lasting effect until the end of the phase
+that affects each location in the staging area. This is
+different from Driven by Shadow (CORE 92) which
+uses the language “currently in the staging area” when
+it is revealed and only affects enemies and locations in
+the staging area at the time it is revealed.
+-----
+Q: Can I use Fortune or Fate (CORE 54) to put Beorn
+(OHUH 5) into play from a player's discard pile, even
+though he is immune to player card effects?
+A: Yes. A hero's ability is only active while it is in play.
+Therefore, Beorn is not immune to player card effects
+(such as Fortune or Fate) while he is in the discard
+pile.
+-----
+Q: If there is an unattached Ranger Spikes (HoN17)
+in the staging area when an enemy with the ambush
+keyword is revealed from the deck, what happens?
+A: The Ranger Spikes will attach to that enemy,
+preventing the players from making the engagement
+checks for the ambush keyword.
+13
+-----
+Q: When Oin (OtD 4) gains the tactics resource icon
+from his ability, does that count as the "printed" tactics
+resource icon?
+A: No. The "printed" resource icon always refers to
+the icon that appears in the Resource Icon space as
+identified on page 8 in the rulebook.
+-----
+Q: If there are no characters with poison attached when
+Crazy Cob (OtD 29) is revealed from the encounter
+deck, does it still make an attack?
+A: Yes. Since each character has 0 poison, the first
+player will choose which character Crazy Cob attacks.
+-----
+Q: If I give control of one of my heroes to another
+player with Desperate Alliance (OtD 10) and my other
+heroes are killed, am I eliminated from the game?
+A: No. A player is not eliminated from the game
+unless each of his heroes is killed. The hero chosen by
+Desperate Alliance is still in play and will return to
+your control at the end of the phase.
+-----
+Q: If I play Expecting Mischief (OHUH 18) and it
+deals enough damage to the first enemy revealed to
+destroy it, do I still resolve any “when revealed” or
+keyword effects on that enemy?
+A: No. The effect on Expecting Mischief resolves the
+same way as the effect on Thalin (Core 6).
+-----
+Q: Is a shadow card effect considered an encounter
+card effect?
+A: Yes. Cards that prevent characters from canceling
+encounter card effects also prevent players from
+canceling shadow card effects.
+-----
+Q: If the effect on Dwarrowdelf Axe (KD 7) destroys
+an enemy, can I play Foe-hammer (OHUH 15)?
+A: No. In order to play Foe-hammer, the attacking
+character must destroy the enemy. That means dealing
+enough damage to it with attack strength.
+-----
+Q: Can you put Fili (OHUH 6) into play for free from
+your hand after you play Kili (OHUH 7)?
+A: No. For either character's ability to work, the other
+character must enter play from your deck.
+-----
+Q: After False Lead (SF 25) is revealed and its effect
+resolves, do the players continue staging?
+A: No. The quest phase ends immediately and the
+players do not continue staging.
+-----
+Q: What happens if an attacking enemy is destroyed
+before its attack resolves?
+A: When resolving an enemy attack, the defending
+player should check the status of the attacking enemy
+at end of each step: is there still an attacking enemy? If
+yes, proceed to next step. If no, end the attack.
+-----
+Q: When an enemy that has already made an attack
+engages a new player during the combat phase, does it
+make another attack?
+A: Not unless it is directed to by card effect.
+-----
+Q: While attempting to answer a Riddle in the scenario
+Dungeons Deep and Caverns Dim, when can players
+take actions?
+A: Players can take actions after step 2, before step 3.
+-----
+Q: While making a Burgle attempt in The Lonely
+Mountain scenario, when can players take actions?
+A: Players can take actions after step 2, before step 3.
+-----
+Q: Can I play an attachment on an enemy or location
+that is immune to player card effects?
+A: No. Playing an attachment on a card is a form
+of targeting, and cards with "immune to player card
+effects" cannot be targeted by player cards.
+-----
+Q: Can I use Quick Strike (Core 35) to declare an
+attack against an enemy that is immune to player card
+effects?
+A: Yes. The effect of Quick Strike targets a character
+and allows that character to make an attack, therefore
+the chosen enemy's immunity does not factor.
+-----
+Q: What counts as a “ranged” attack?
+A: A ranged attack is an attack made by a character
+with the ranged keyword against an enemy engaged
+with another player.
+-----
+Q: Can I used A Good Harvest (AtS 10) to play a 0 cost
+card without a resource match?
+A: No. A Good Harvest only allows you to spend
+resources for the named sphere, a resource match is
+still needed to play cards with no resource cost.
+-----
+Q: If a card is attached to Nameless Thing (D 125) as
+part of the resolution of its Forced effect, is that card’s
+game text active?
+A: No. Cards that are attached to Nameless Thing (or
+Elder Nameless Thing) as a result of triggering its
+Forced effect are considered attachments with no card
+title or game text. The only active part of the attached
+card is its cost.
+-----
+Q: When an enemy makes an attack as part of its
+“when revealed” effect, is that enemy in the staging
+area?
+A: No. Enemies are added to the staging after resolving
+their “when revealed” effects. An enemy that makes an
+attack as part of its “when revealed” effect, is not in
+the staging area or engaged with the defending player
+unless a card effect says it is.
+14
+-----
+Q: When playing with the A Journey to Rhosgobel
+Nightmare Deck, can Shot From the Sky (AJtR 7) and
+Noxious Supplies (AJtR 8) attach to Wilyador (SoM
+64), even though he has the text, “No attachments”?
+A: Yes. The Adventure Pack insert for A Journey to
+Rhosgobel defines “no attachments” as meaning that
+“players cannot play or move attachment cards onto
+Wilyador.” Since players are not playing or moving
+these attachments (an encounter card effect is attaching
+them), they can be attached to Wilyador.
+-----
+Q: If I engage more than one enemy with a higher
+engagement cost than my threat, will the second part of
+Sam Gamgee’s (TBR 2) ability trigger more than once,
+even if I cannot ready him more than once?
+A: Yes. Because it does not use the word “then”,
+Sam’s bonus to Ò, Û and Ú is not dependent on
+him readying. His readying effect and his bonus
+to Ò, Û and Ú are two different effects that both
+have the trigger of engaging an enemy with a higher
+engagement cost than your threat.
+-----
+Q: If an enemy is put into play directly engaged with
+me, has that enemy “engaged” me for the purposes
+Forced effects or Responses that trigger from engaging
+an enemy?
+A: Yes. An enemy that enters play directly engaged with
+a player has engaged that player.
+-----
+Q: Can I use Dori (OHUH 9) to prevent damage from
+being assigned to Beorn (OHUH 5), even though Beorn
+is immune to player card effects?
+A: Yes. Dori’s Response targets the damage being
+assigned, not the character it is being assigned to, so
+Beorn’s immunity does not factor.
+-----
+Q: When playing The Blood of Gondor, if a card effect
+such as stage 1b of The Ambush (AtS 117) or Lying in
+Wait (AtS 129) turns each of my hidden cards faceup,
+and one of those cards forces me to take another hidden
+card, do I have to turn that card faceup as well?
+A: No. When you are instructed to turn each of your
+hidden cards faceup, only the hidden cards that are
+currently in front of you at that time are turned faceup;
+any hidden cards you are forced to take as part of
+that effect, such as from Evil Crow (AtS 122), remain
+facedown in front of you.
+-----
+Q: During the Setup for stage 1A of The
+Necromancer’s Tower (Core 123), should each
+objective have one encounter card attached to it, or
+two?
+A: One. When you reveal a Guarded objective, you
+must reveal the top card of the encounter deck and
+attach it to that objective, guarding it. The additional
+instruction on The Necromancer’s Tower to “... attach
+1 encounter to each objective card” is there as a
+reminder, so that players know to attach 1 encounter
+card to each Guarded objective.
+-----
+Q: When an encounter card effects instructs me to
+search the encounter deck and discard pile for an
+enemy, reveal it, and add it to the staging area during
+a quest to which Thalin (CORE 6) is committed, does
+he still deal 1 damage to an enemy chosen from the
+discard pile?
+A: Yes. Enemies revealed from the encounter deck
+and discard pile by quest card and encounter card
+effects are still considered to have been revealed by the
+encounter deck.
+-----
+Q: If I have Light of Valinor (D 107) attached to a
+hero I control, can that hero commit to the quest while
+exhausted?
+A: No. Characters must be ready and able to exhaust
+in order to quest, attack, or defend. Card effects that
+allow a character to perform any of those actions
+without exhausting do not allow exhausted characters
+to perform those actions.
+-----
+Q: When an enemy with the text “cannot leave play”
+has damage equal to or in excess of its hit points, what
+happens?
+A: Nothing. The enemy cannot leave play, and therefore
+will continue to function as an enemy in play.
+-----
+Q: When I reveal the last card of the encounter deck, do
+I immediately reset the quest deck before resolving the
+staging of the revealed card?
+A: No. Resolve the staging of the revealed card,
+including any ‘When Revealed’ effects, before resetting
+the quest deck, if able. If you are unable to completely
+resolve the staging of the card because it instructs you
+to interact with the encounter deck in some manner,
+then reset the quest deck and finish resolving the effect.
+-----
+Q: If I am engaged with The Lord of the Dead (SoE 5)
+when I play Saruman (VoI 3), do I still have to raise
+each player’s threat for his Doomed 3?
+A: No. The moment Saruman enters play under your
+control, the passive effect on The Lord of the Dead
+causes you to treat his text box as blank, before the
+Doomed keyword can trigger.
+-----
+Q: If I use the Response effect on Saruman (VoI 3) to
+treat an encounter card guarding an objective as out of
+play, does that mean I can claim that objective because
+it is free of encounters?
+A: No. When a card is considered to be out of play,
+each card attached to it is also considered to be out of
+play. Because objectives with the Guarded keyword are
+attached to the enemy or location that is guarding it, if
+that enemy or location is considered to be out of play,
+the guarded objective is too.
+15
+-----
+Q: How many keywords does The Balrog (RD 44)
+have?
+A: One. Indestructible is the only keyword on The
+Balrog.
+-----
+Q: Does the Guarded keyword trigger when the
+encounter card it’s on is “added” to the staging area
+(and not “revealed”)?
+A: No. In order for the Guarded keyword to trigger, the
+encounter card it appears on must be “revealed” from
+the encounter deck.
+-----
+Q: If Mines of Moria (TRD 52) is in the staging area
+and there is an active location, where is progress placed
+first?
+A: Progress must be placed on the Mines of Moria in
+the staging area before it can be placed on the active
+location because the game text on Mines of Moria
+overrides the game rules via the Golden Rule.
+-----
+Q: If there is an active location with a Response effect
+that triggers when it is explored and the players make
+enough progress to explore the location and advance
+to the next stage, when do the players resolve the
+location’s Response effect?
+A: The players should advance to the next stage
+immediately and resolve any ‘when revealed’ effects on
+the next stage, then resolve the Response effect on the
+active location.
+-----
+Q: If I attach Sword-thain (AA 149) to a unique Lore
+ally (making that ally a hero), does the attached hero
+have the printed Lore icon?
+A: Yes. If an ally with a printed sphere icon becomes a
+hero, that hero is also considered to have that printed
+sphere icon.
+-----
+Q: If I use Sneak Attack (CORE 23) to put a unique
+ally into play during the planning phase and attach
+Sword-thain (AA 149) to that ally, is that ally returned
+to my hand at the end of the phase?
+A: No. The ally that entered play with Sneak Attack is
+no longer an ally because it has Sword-thain attached,
+and Sneak Attack’s delayed effect no longer affects it.
+-----
+Q: Can a character with the Ranged keyword join an
+attack against an enemy in the staging area?
+A: No. The Ranged keyword only gives characters with
+that keyword the ability to attack enemies engaged with
+another player.
+-----
+Q: If a side quest is the “current” quest, is the text on
+the main quest still active?
+A: Yes. The text on each quest card in play is active.
+-----
+Q: If an encounter card effect with the Peril keyword
+causes an enemy to make an attack against me, can my
+friend use his character with the Sentinel keyword to
+defend the attack?
+A: Yes. Once the enemy attack is initiated, it should
+follow each step of ‘resolving enemy attacks,’ and the
+action windows inbetween each step are open to all
+players.
+-----
+Q: Can a player’s threat be reduced below 0?
+A: No. The threat dial does not allow negative values.
+-----
+Q: Can I use Proud Hunters (H 32) to add resources to
+Beorn’s (OHaUH 1) resource pool even though he is
+immune to player card effects?
+A: Yes. A hero’s resource pool is a separate game
+element from the hero card, so cards that target Beorn’s
+resource pool (and not Beorn) are not affected by his
+immunity to player card effects.
+-----
+Q: Can I play Elevenses (DC 36) after resolving a quest
+since characters are considered to be committed to the
+quest until the end of the quest phase?
+A: No. Elevenses says “Play only after the staging
+step” which means it is only playable immediately after
+the staging step ends.
+-----
+Q: Are there any player cards that allow me to attack an
+enemy in the staging area if it is immune to player card
+effects?
+A: No. None.
