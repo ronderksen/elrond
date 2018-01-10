@@ -48,7 +48,7 @@ module.exports = function ringsimg({ name, filters }, cardList, bot, channelID, 
         logger.error(err);
         bot.sendMessage({
           to: channelID,
-          message: `Unable to retrieve image\nYou can view the other ${imgMatches.length - 1} cards at http://ringsdb.com/find?${searchParams} or use the advanced search parameters to refine your search.`
+          message: `Unable to retrieve image\nYou can view the ${imgMatches.length} cards at http://ringsdb.com/find?${searchParams} or use the advanced search parameters to refine your search.`
         });
       });
   }
