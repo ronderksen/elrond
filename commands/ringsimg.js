@@ -3,6 +3,13 @@ const querystring = require('querystring');
 const helpers = require("./command-helpers");
 
 module.exports = function ringsimg({ name, filters }, cardList, bot, channelID, logger) {
+  if (name === '') {
+    bot.sendMessage({
+      to: channelID,
+      message: 'I am sorry, but I need at least a name to find a card'
+    });
+    return;
+  }
   logger.info(`Searching for ${name}`);
   const imgMatches = cardList
     .filter(c => c.name.toLowerCase().indexOf(name.trim()) > -1)
