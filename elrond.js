@@ -59,16 +59,18 @@ logger.level = "debug";
 // Initialize Discord Bot
 Promise.all([getCardIndex(), getQuestIndex()])
   .then(([cardList, questCards]) => {
-    const questIndex = questCards.reduce((acc, quest) => {
-      if (!quest.CardSet) {
-        return acc;
-      }
-      const title = quest.CardSet;
-      if (acc.includes(title)) {
-        return acc;
-      }
-      return [...acc, title];
-    }, []);
+    const questIndex = questCards
+      .filter(quest => !quest.CardSet.contains('Nightmare'))
+      .reduce((acc, quest) => {
+        if (!quest.CardSet) {
+          return acc;
+        }
+        const title = quest.CardSet;
+        if (acc.includes(title)) {
+          return acc;
+        }
+        return [...acc, title];
+      }, []);
     return [cardList, questIndex];
   })
   .then(([cardList, questIndex]) => {
