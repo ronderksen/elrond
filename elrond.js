@@ -16,11 +16,11 @@ async function getCardIndex() {
   }
 }
 
-async function getQuestIndex() {
-  logger.info("Retrieving quest cards");
+async function getScenarios() {
+  logger.info("Retrieving scenarios");
   try {
     return fetch(
-      "http://192.168.1.101/wordpress/wp-content/uploads/2017/12/QuestCards.json"
+      "http://192.168.1.101/wordpress/wp-content/uploads/2018/01/Scenarios.json"
     ).then(res => res.json());
   } catch (err) {
     logger.error(err);
@@ -57,23 +57,12 @@ logger.add(logger.transports.Console, {
 });
 logger.level = "debug";
 // Initialize Discord Bot
-Promise.all([getCardIndex(), getQuestIndex()])
-  .then(([cardList, questCards]) => {
-    const questIndex = questCards
-      .filter(quest => quest.CardSet.indexOf('Nightmare') === -1)
-      .reduce((acc, quest) => {
-        if (!quest.CardSet) {
-          return acc;
-        }
-        const title = quest.CardSet;
-        if (acc.includes(title)) {
-          return acc;
-        }
-        return [...acc, title];
-      }, []);
-    return [cardList, questIndex];
+Promise.all([getCardIndex(), getScenarios()])
+  .then(([cardList, scenarios]) => {
+    scenarioIndex = scenarios.map(({ Title }) => Title);
+    return [cardList, scenarioIndex];
   })
-  .then(([cardList, questIndex]) => {
+  .then(([cardList, scenarioIndex]) => {
     const bot = new Discord.Client({
       token: auth.token,
       autorun: true
@@ -126,7 +115,7 @@ Promise.all([getCardIndex(), getQuestIndex()])
           user, 
           userID,
           cardList,
-          questIndex,
+          scenarioIndex,
           emojiSymbols,
           bot,
           channelID,

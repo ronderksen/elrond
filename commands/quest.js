@@ -1,7 +1,7 @@
 const helpers = require("./command-helpers");
 
-module.exports = function quest(questIndex, userID, bot, channelID, logger) {
-  const quest = helpers.getRandomItem(questIndex);
+module.exports = function quest(scenarioIndex, userID, bot, channelID, logger) {
+  const quest = helpers.getRandomItem(scenarioIndex);
   const questUrlPath = quest.replace(/\s/g, "-");
   const url = `http://hallofbeorn.com/Cards/Scenarios/${questUrlPath}`;
   bot.sendMessage({

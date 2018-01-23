@@ -11,7 +11,7 @@ module.exports = function({
   user,
   userID,
   cardList,
-  questIndex,
+  scenarioIndex,
   emojiSymbols,
   bot,
   channelID,
@@ -22,7 +22,7 @@ module.exports = function({
     rings: query =>
       rings(query, cardList, emojiSymbols, bot, channelID, logger),
     ringsimg: query => ringsimg(query, cardList, bot, channelID, logger),
-    quest: () => quest(questIndex, userID, bot, channelID, logger),
+    quest: () => quest(scenarioIndex, userID, bot, channelID, logger),
     hero: query => hero(query, cardList, emojiSymbols, bot, channelID, logger),
     card: query => card(query, cardList, emojiSymbols, bot, channelID, logger),
     faq: query => faq(query, bot, channelID, logger),
