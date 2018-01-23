@@ -16,11 +16,18 @@ module.exports = function rings(
     return;
   }
   logger.info(`Searching for ${name.trim()}`);
-  const matches = cardList
+  let matches = cardList
     .filter(c => c.name.toLowerCase().indexOf(name.trim()) > -1)
     .filter(c => helpers.checkFilters(c, filters));
 
   logger.info(`found ${matches.length} cards, sending response`);
+  if (matches.length > 3) {
+    bot.sendMessage({
+      to: channelID,
+      message: `I found too many cards, here are the first 3 results:`
+    });
+    matches = matches.splice(0, 3);
+  }
   const message = matches.reduce((acc, card) => {
     acc += helpers.createCardMessage(emojiSymbols, card);
     return acc;
