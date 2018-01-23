@@ -60,7 +60,7 @@ logger.level = "debug";
 Promise.all([getCardIndex(), getQuestIndex()])
   .then(([cardList, questCards]) => {
     const questIndex = questCards
-      .filter(quest => !quest.CardSet.contains('Nightmare'))
+      .filter(quest => quest.CardSet.indexOf('Nightmare') > -1)
       .reduce((acc, quest) => {
         if (!quest.CardSet) {
           return acc;
