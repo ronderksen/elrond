@@ -60,10 +60,10 @@ logger.level = "debug";
 Promise.all([getCardIndex(), getQuestIndex()])
   .then(([cardList, questCards]) => {
     const questIndex = questCards.reduce((acc, quest) => {
-      if (!quest.EncounterInfo) {
+      if (!quest.CardSet) {
         return acc;
       }
-      const title = quest.EncounterInfo.EncounterSet;
+      const title = quest.CardSet;
       if (acc.includes(title)) {
         return acc;
       }
