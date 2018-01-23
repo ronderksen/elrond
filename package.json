@@ -4,11 +4,9 @@
   "description": "Discord bot for looking up cards and card images",
   "main": "elrond.js",
   "scripts": {
-    "x": "node -e \"console.log(process.env)\"",
     "build": "docker build . -t chevalric/discordbot-elrond:$npm_package_version",
     "push": "docker push chevalric/discordbot-elrond:$npm_package_version",
-    "start": "node elrond.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node elrond.js"
   },
   "repository": {
     "type": "git",
