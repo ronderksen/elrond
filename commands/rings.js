@@ -8,6 +8,13 @@ module.exports = function rings(
   channelID,
   logger
 ) {
+  if (name === '') {
+    bot.sendMessage({
+      to: channelID,
+      message: 'I am sorry, but I need at least a name to find a card'
+    });
+    return;
+  }
   logger.info(`Searching for ${name.trim()}`);
   const matches = cardList
     .filter(c => c.name.toLowerCase().indexOf(name.trim()) > -1)
