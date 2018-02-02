@@ -7,9 +7,10 @@ const getCommandList = require("./commands");
 async function getCardIndex() {
   logger.info("Retrieving player cards");
   try {
-    return fetch("http://ringsdb.com/api/public/cards/?_format=json").then(
-      res => res.json()
-    );
+    return fetch("http://ringsdb.com/api/public/cards/?_format=json")
+      .then(
+        res => res.json()
+      );
   } catch (err) {
     logger.error(err);
     return Promise.reject(err);
@@ -34,13 +35,18 @@ function getNameAndFilters(args) {
       if (arg.indexOf(":") > -1) {
         const [filterKey, value] = arg.split(":");
         return {
-          name: acc.name,
+          ...acc,
           filters: [...acc.filters, { filterKey, value }]
         };
       }
+      const name = arg
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, "")
+        .trim();
       return {
         ...acc,
-        name: `${acc.name} ${arg.toLowerCase()}`.trim()
+        name: `${acc.name} ${name}`.trim()
       };
     },
     {
@@ -105,14 +111,14 @@ Promise.all([getCardIndex(), getScenarios()])
       // Our bot needs to know if it will execute a command
       // It will listen for messages that will start with `!`
       if (message.startsWith("!")) {
-        var args = message.substring(1).split(" ");
-        var cmd = args[0];
+        let args = message.substring(1).split(" ");
+        const cmd = args[0];
 
         args = args.splice(1);
 
         const query = getNameAndFilters(args);
         const commandConfig = {
-          user, 
+          user,
           userID,
           cardList,
           scenarioIndex,
