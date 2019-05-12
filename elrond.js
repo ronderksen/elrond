@@ -76,16 +76,11 @@ function getNameAndFilters(args) {
 }
 
 function parseQCData(qcData) {
-  const { 
-    quests: { 
-      cycle 
-    }, 
-    faq: { 
-      entry: faqEntries 
-    }, 
-    glossary: { 
-      entry: glossaryEntries 
-    } 
+  const {
+    quests: { cycle },
+    faq: { entry: faqEntries },
+    glossary: { entry: glossaryEntries },
+    carderratas: { card: cardErratas },
   } = qcData;
 
   const scenarios = cycle.reduce((acc, { quest }) => {
@@ -96,17 +91,32 @@ function parseQCData(qcData) {
           name,
           url,
           hoburl,
-        }))
+        })),
       ];
     }
     return acc;
   }, []);
-  const faq = faqEntries.map(({ "@attributes": { title }, ruletext }) => ({ title, ruletext }));
-  const glossary = glossaryEntries.map(({ "@attributes": { title }, ruletext }) => ({ title, ruletext }));
+  const faq = faqEntries.map(({ '@attributes': { title, id }, ruletext }) => ({
+    title,
+    id,
+    ruletext,
+  }));
+  const glossary = glossaryEntries.map(({ '@attributes': { title, id }, ruletext }) => ({
+    title,
+    id,
+    ruletext,
+  }));
+  const erratas = cardErratas.map(({ '@attributes': { title, id }, ruling, qa }) => ({
+    title,
+    id,
+    ruling,
+    qa
+  }));
   return {
     scenarios,
     faq,
-    glossary
+    glossary,
+    erratas,
   };
 }
 
@@ -115,7 +125,7 @@ Promise.all([getCardIndex(), getQCData()])
   .then(([cardList, qcData]) => {
     return [cardList, parseQCData(qcData)];
   })
-  .then(([cardList, {scenarioIndex, ...rulesRef}]) => {
+  .then(([cardList, { scenarioIndex, ...rulesRef }]) => {
     const bot = new Discord.Client();
     const emojiNames = [
       'lore',
@@ -185,12 +195,17 @@ Promise.all([getCardIndex(), getQCData()])
           case 'faq':
             return commands.rr({
               ...query,
-              type: "faq"
+              type: 'faq',
             });
-          case 'glossary': 
+          case 'glossary':
             return commands.rr({
               ...query,
-              type: "glossary"
+              type: 'glossary',
+            });
+          case 'errata':
+            return commands.rr({
+              ...query,
+              type: 'errata',
             });
           case 'myrings':
             return commands.myrings();
