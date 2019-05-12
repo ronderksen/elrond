@@ -100,7 +100,6 @@ Promise.all([getCardIndex(), getQCData()])
     return [cardList, parseQCData(qcData)];
   })
   .then(([cardList, scenarioIndex]) => {
-    console.log(scenarioIndex);
     const bot = new Discord.Client({
       token: auth.token,
       autorun: true,
