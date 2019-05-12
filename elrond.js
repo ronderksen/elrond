@@ -1,5 +1,5 @@
 const fetch = require('node-fetch');
-const Discord = require('discord.io');
+const Discord = require('discord.js');
 const Winston = require('winston');
 const auth = require('./auth.json');
 const getCommandList = require('./commands');
@@ -76,8 +76,18 @@ function getNameAndFilters(args) {
 }
 
 function parseQCData(qcData) {
-  const { quests } = qcData;
-  const { cycle } = quests;
+  const { 
+    quests: { 
+      cycle 
+    }, 
+    faq: { 
+      entry: faqEntries 
+    }, 
+    glossary: { 
+      entry: glossaryEntries 
+    } 
+  } = qcData;
+
   const scenarios = cycle.reduce((acc, { quest }) => {
     if (quest) {
       return [
@@ -91,7 +101,13 @@ function parseQCData(qcData) {
     }
     return acc;
   }, []);
-  return scenarios;
+  const faq = faqEntries.map(({ "@attributes": { title }, ruletext }) => ({ title, ruletext }));
+  const glossary = glossaryEntries.map(({ "@attributes": { title }, ruletext }) => ({ title, ruletext }));
+  return {
+    scenarios,
+    faq,
+    glossary
+  };
 }
 
 // Initialize Discord Bot
@@ -99,11 +115,8 @@ Promise.all([getCardIndex(), getQCData()])
   .then(([cardList, qcData]) => {
     return [cardList, parseQCData(qcData)];
   })
-  .then(([cardList, scenarioIndex]) => {
-    const bot = new Discord.Client({
-      token: auth.token,
-      autorun: true,
-    });
+  .then(([cardList, {scenarioIndex, ...rulesRef}]) => {
+    const bot = new Discord.Client();
     const emojiNames = [
       'lore',
       'spirit',
@@ -122,10 +135,9 @@ Promise.all([getCardIndex(), getQCData()])
     bot.on('ready', evt => {
       logger.info('Connected');
       logger.info('Logged in as: ');
-      logger.info(bot.username + ' - (' + bot.id + ')');
-      const server = Object.values(bot.servers)[0];
+      logger.info(bot.user.username + ' - (' + bot.user.tag + ')');
       emojiSymbols = emojiNames.reduce((acc, emo) => {
-        const emoji = Object.values(server.emojis).find(emoji => emoji.name === emo);
+        const emoji = Object.values(bot.emojis).find(emoji => emoji.name === emo);
         if (emoji) {
           return {
             ...acc,
@@ -136,24 +148,24 @@ Promise.all([getCardIndex(), getQCData()])
       }, {});
     });
 
-    bot.on('message', (user, userID, channelID, message, evt) => {
+    bot.on('message', ({ author, content, channel }) => {
       // Our bot needs to know if it will execute a command
       // It will listen for messages that will start with `!`
-      if (message.startsWith('!')) {
-        let args = message.substring(1).split(' ');
+      if (content.startsWith('!')) {
+        let args = content.substring(1).split(' ');
         const cmd = args[0];
 
         args = args.splice(1);
 
         const query = getNameAndFilters(args);
         const commandConfig = {
-          user,
-          userID,
+          author,
           cardList,
           scenarioIndex,
+          rulesRef,
           emojiSymbols,
           bot,
-          channelID,
+          channel,
           logger,
         };
         const commands = getCommandList(commandConfig);
@@ -171,7 +183,15 @@ Promise.all([getCardIndex(), getQCData()])
           case 'card':
             return commands.card(query);
           case 'faq':
-            return commands.faq(query);
+            return commands.rr({
+              ...query,
+              type: "faq"
+            });
+          case 'glossary': 
+            return commands.rr({
+              ...query,
+              type: "glossary"
+            });
           case 'myrings':
             return commands.myrings();
           default:
@@ -183,6 +203,8 @@ Promise.all([getCardIndex(), getQCData()])
     bot.on('error', e => console.error(e));
     bot.on('warn', e => console.warn(e));
     bot.on('debug', e => console.debug(e));
+
+    bot.login(auth.token);
   })
   .catch(err => {
     logger.error(`Error getting indexes: ${err}`);

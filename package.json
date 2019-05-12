@@ -21,8 +21,10 @@
   "homepage": "https://github.com/ronderksen/elrond#readme",
   "dependencies": {
     "discord.io": "github:Woor/discord.io#gateway_v6",
+    "discord.js": "^11.5.0",
     "node-fetch": "^2.5.0",
     "nodemon": "^1.19.0",
+    "striptags": "^3.1.1",
     "winston": "^3.2.1"
   }
 }
