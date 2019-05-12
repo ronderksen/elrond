@@ -7,7 +7,9 @@ module.exports = function help(channel) {
       "!quest - Select a random quest\n" +
       "!hero - Select a random hero\n" +
       "!card - Select a random card (skipping heroes)\n" +
-      "!faq <text> - Finds questions in FAQ containing <text> (Not yet implemented)\n" +
+      "!faq <text> - Finds questions in FAQ containing <text>\n" +
+      "!glossary <text> - Finds questions in Glossary containing <text>\n" +
+      "!errata <cardname> - Finds errata for card with name <cardname>\n" +
       "!myrings - Display your links from RingsDB\n" +
       "**It is perilous to study too deeply the arts of the Enemy, for good or for ill. But such falls and betrayals, alas, have happened before.**"
   );
