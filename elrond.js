@@ -1,28 +1,47 @@
-const fetch = require("node-fetch");
-const Discord = require("discord.io");
-const logger = require("winston");
-const auth = require("./auth.json");
-const getCommandList = require("./commands");
+const fetch = require('node-fetch');
+const Discord = require('discord.io');
+const Winston = require('winston');
+const auth = require('./auth.json');
+const getCommandList = require('./commands');
+
+const logger = Winston.createLogger({
+  level: 'debug',
+  format: Winston.format.json(),
+  transports: [new Winston.transports.Console()],
+});
 
 async function getCardIndex() {
-  logger.info("Retrieving player cards");
+  logger.info('Retrieving player cards');
   try {
-    return fetch("http://ringsdb.com/api/public/cards/?_format=json")
-      .then(
-        res => res.json()
-      );
+    return fetch('http://ringsdb.com/api/public/cards/?_format=json').then(res => res.json());
   } catch (err) {
     logger.error(err);
     return Promise.reject(err);
   }
 }
 
-async function getScenarios() {
-  logger.info("Retrieving scenarios");
+/**
+ * QC format =
+ * {
+ *   quests: {
+ *      cycle: {
+ *        @attributes: {
+ *          name
+ *        },
+ *        url,
+ *        hoburl
+ *      }
+ *    }
+ * }
+ *
+ * This function extracts the name, QC url and hall of beorn url.
+ */
+async function getQCData() {
+  logger.info('Retrieving data from QC');
   try {
-    return fetch(
-      "http://192.168.1.101/wordpress/wp-content/uploads/2018/01/Scenarios.json"
-    ).then(res => res.json());
+    return fetch('http://lotr-lcg-quest-companion.gamersdungeon.net/api.php?format=json').then(
+      res => res.json()
+    );
   } catch (err) {
     logger.error(err);
     return Promise.reject(err);
@@ -32,86 +51,97 @@ async function getScenarios() {
 function getNameAndFilters(args) {
   return args.reduce(
     (acc, arg) => {
-      if (arg.indexOf(":") > -1) {
-        const [filterKey, value] = arg.split(":");
+      if (arg.indexOf(':') > -1) {
+        const [filterKey, value] = arg.split(':');
         return {
           ...acc,
-          filters: [...acc.filters, { filterKey, value }]
+          filters: [...acc.filters, { filterKey, value }],
         };
       }
       const name = arg
         .toLowerCase()
         .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, "")
+        .replace(/[\u0300-\u036f]/g, '')
         .trim();
       return {
         ...acc,
-        name: `${acc.name} ${name}`.trim()
+        name: `${acc.name} ${name}`.trim(),
       };
     },
     {
-      name: "",
-      filters: []
+      name: '',
+      filters: [],
     }
   );
 }
 
-// Configure logger settings
-logger.remove(logger.transports.Console);
-logger.add(logger.transports.Console, {
-  colorize: true
-});
-logger.level = "debug";
+function parseQCData(qcData) {
+  const { quests } = qcData;
+  const { cycle } = quests;
+  const scenarios = cycle.reduce((acc, { quest }) => {
+    if (quest) {
+      return [
+        ...acc,
+        ...quest.map(({ '@attributes': { name }, url, hoburl }) => ({
+          name,
+          url,
+          hoburl,
+        }))
+      ];
+    }
+    return acc;
+  }, []);
+  return scenarios;
+}
+
 // Initialize Discord Bot
-Promise.all([getCardIndex(), getScenarios()])
-  .then(([cardList, scenarios]) => {
-    scenarioIndex = scenarios.map(({ Title }) => Title);
-    return [cardList, scenarioIndex];
+Promise.all([getCardIndex(), getQCData()])
+  .then(([cardList, qcData]) => {
+    return [cardList, parseQCData(qcData)];
   })
   .then(([cardList, scenarioIndex]) => {
+    console.log(scenarioIndex);
     const bot = new Discord.Client({
       token: auth.token,
-      autorun: true
+      autorun: true,
     });
     const emojiNames = [
-      "lore",
-      "spirit",
-      "leadership",
-      "tactics",
-      "neutral",
-      "fellowship",
-      "attack",
-      "defense",
-      "willpower",
-      "threat",
-      "hitpoints"
+      'lore',
+      'spirit',
+      'leadership',
+      'tactics',
+      'neutral',
+      'fellowship',
+      'attack',
+      'defense',
+      'willpower',
+      'threat',
+      'hitpoints',
     ];
     let emojiSymbols;
 
-    bot.on("ready", evt => {
-      logger.info("Connected");
-      logger.info("Logged in as: ");
-      logger.info(bot.username + " - (" + bot.id + ")");
+    bot.on('ready', evt => {
+      logger.info('Connected');
+      logger.info('Logged in as: ');
+      logger.info(bot.username + ' - (' + bot.id + ')');
       const server = Object.values(bot.servers)[0];
       emojiSymbols = emojiNames.reduce((acc, emo) => {
-        const emoji = Object.values(server.emojis).find(
-          emoji => emoji.name === emo
-        );
+        const emoji = Object.values(server.emojis).find(emoji => emoji.name === emo);
         if (emoji) {
           return {
             ...acc,
-            [emo]: `<:${emo}:${emoji.id}>`
+            [emo]: `<:${emo}:${emoji.id}>`,
           };
         }
         return acc;
       }, {});
     });
 
-    bot.on("message", (user, userID, channelID, message, evt) => {
+    bot.on('message', (user, userID, channelID, message, evt) => {
       // Our bot needs to know if it will execute a command
       // It will listen for messages that will start with `!`
-      if (message.startsWith("!")) {
-        let args = message.substring(1).split(" ");
+      if (message.startsWith('!')) {
+        let args = message.substring(1).split(' ');
         const cmd = args[0];
 
         args = args.splice(1);
@@ -125,25 +155,25 @@ Promise.all([getCardIndex(), getScenarios()])
           emojiSymbols,
           bot,
           channelID,
-          logger
+          logger,
         };
         const commands = getCommandList(commandConfig);
         switch (cmd) {
-          case "help":
+          case 'help':
             return commands.help();
-          case "rings":
+          case 'rings':
             return commands.rings(query);
-          case "ringsimg":
+          case 'ringsimg':
             return commands.ringsimg(query);
-          case "quest":
+          case 'quest':
             return commands.quest();
-          case "hero":
+          case 'hero':
             return commands.hero(query);
-          case "card":
+          case 'card':
             return commands.card(query);
-          case "faq":
+          case 'faq':
             return commands.faq(query);
-          case "myrings":
+          case 'myrings':
             return commands.myrings();
           default:
             return null;
@@ -151,12 +181,12 @@ Promise.all([getCardIndex(), getScenarios()])
       }
     });
 
-    bot.on("error", (e) => console.error(e));
-    bot.on("warn", (e) => console.warn(e));
-    bot.on("debug", (e) => console.debug(e));
+    bot.on('error', e => console.error(e));
+    bot.on('warn', e => console.warn(e));
+    bot.on('debug', e => console.debug(e));
   })
   .catch(err => {
-    logger.error(`Error getting card indexes: ${err}`);
+    logger.error(`Error getting indexes: ${err}`);
     logger.error(err.stack);
   });
 
@@ -164,7 +194,7 @@ process.on('SIGTERM', () => {
   logger.info('SIGTERM received');
 });
 
-process.on('uncaughtException', (err) => {
+process.on('uncaughtException', err => {
   logger.error(`Uncaught exception: ${err}`);
   logger.error(err.stack);
   process.exit(1);
