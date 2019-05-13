@@ -39,7 +39,10 @@ module.exports = function rulesRef({ name, type }, { faq, glossary, erratas }, c
       if (errata) {
         const ruling = striptags(errata.ruling).replace('\n', '');
         const qa = striptags(errata.qa);
-        const body = ruling ? `${ruling}\n\n${qa}` : qa;
+        const errataText = striptags(errata.errata).replace("\\", "");
+        let body = ruling ? `${ruling}\n\n` : '';
+        body += qa ? `${qa}\n\n` : '';
+        body += errataText ? `${errataText}\n` : '';
         const url = `http://lotr-lcg-quest-companion.gamersdungeon.net/#Card${errata.id}`;
         channel.send(`**${errata.title}**\n\n${body}\n\n${url}`);
         return;

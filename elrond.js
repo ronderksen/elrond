@@ -106,11 +106,12 @@ function parseQCData(qcData) {
     id,
     ruletext,
   }));
-  const erratas = cardErratas.map(({ '@attributes': { title, id }, ruling, qa }) => ({
+  const erratas = cardErratas.map(({ '@attributes': { title, id }, ruling, qa, errata }) => ({
     title,
     id,
     ruling,
-    qa
+    qa,
+    errata
   }));
   return {
     scenarios,
