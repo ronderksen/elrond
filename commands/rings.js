@@ -4,15 +4,11 @@ module.exports = function rings(
   { name, filters },
   cardList,
   emojiSymbols,
-  bot,
-  channelID,
+  channel,
   logger
 ) {
   if (name === '') {
-    bot.sendMessage({
-      to: channelID,
-      message: 'I am sorry, but I need at least a name to find a card'
-    });
+    channel.send('I am sorry, but I need at least a name to find a card');
     return;
   }
   logger.info(`Searching for ${name}`);
@@ -27,18 +23,12 @@ module.exports = function rings(
 
   logger.info(`found ${matches.length} cards, sending response`);
   if (matches.length > 3) {
-    bot.sendMessage({
-      to: channelID,
-      message: `I found too many cards, here are the first 3 results:`
-    });
+    channel.send(`I found too many cards, here are the first 3 results:`);
     matches = matches.splice(0, 3);
   }
   const message = matches.reduce((acc, card) => {
     acc += helpers.createCardMessage(emojiSymbols, card);
     return acc;
   }, "");
-  bot.sendMessage({
-    to: channelID,
-    message
-  });
+  channel.send(message);
 };

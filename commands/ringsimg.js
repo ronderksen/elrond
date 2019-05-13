@@ -1,12 +1,9 @@
 const fetch = require("node-fetch");
 const helpers = require("./command-helpers");
 
-module.exports = function ringsimg({ name, filters }, cardList, bot, channelID, logger) {
+module.exports = function ringsimg({ name, filters }, cardList, channel, logger) {
   if (name === '') {
-    bot.sendMessage({
-      to: channelID,
-      message: 'I am sorry, but I need at least a name to find a card'
-    });
+    channel.send('I am sorry, but I need at least a name to find a card');
     return;
   }
   logger.info(`Searching for ${name}`);
@@ -25,42 +22,11 @@ module.exports = function ringsimg({ name, filters }, cardList, bot, channelID, 
     }
 
   logger.info(`found ${imgMatches.length} cards, sending response`);
-  bot.sendMessage({
-    to: channelID,
-    message: `Cards found: ${imgMatches.length}\n\n`
-  });
+  channel.send(`Cards found: ${imgMatches.length}\n\n`);
   if (imgMatches.length > 0) {
     const firstCard = imgMatches[0];
-    fetch(`http://ringsdb.com/${firstCard.imagesrc}`)
-      .then(res =>
-      res.buffer()
-      )
-      .then(file => {
-        let message = '';
-        if (imgMatches.length > 1) {
-          message = `Here is the first card found.\nYou can view the other ${imgMatches.length - 1} cards at http://ringsdb.com/find?${searchParams} or use the advanced search parameters to refine your search.`
-        }
-
-        bot.uploadFile(
-          {
-            to: channelID,
-            file,
-            filename: `${firstCard.name}.png`,
-            message
-          },
-          (err) => {
-            if (err) {
-              logger.error(err);
-            }
-          }
-        );
-      })
-      .catch((err) => {
-        logger.error(err);
-        bot.sendMessage({
-          to: channelID,
-          message: `Unable to retrieve image\nYou can view the ${imgMatches.length} cards at http://ringsdb.com/find?${searchParams} or use the advanced search parameters to refine your search.`
-        });
-      });
+    channel.send({
+      files: [`http://ringsdb.com/${firstCard.imagesrc}`]
+    })
   }
 };
