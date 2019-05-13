@@ -39,7 +39,7 @@ module.exports = function rulesRef({ name, type }, { faq, glossary, erratas }, c
       if (errata) {
         const ruling = striptags(errata.ruling).replace('\n', '');
         const qa = striptags(errata.qa);
-        const errataText = striptags(errata.errata).replace("\\", "");
+        const errataText = striptags(errata.errata).replace(/\\/g, "");
         let body = ruling ? `${ruling}\n\n` : '';
         body += qa ? `${qa}\n\n` : '';
         body += errataText ? `${errataText}\n` : '';
