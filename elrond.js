@@ -147,13 +147,12 @@ Promise.all([getCardIndex(), getQCData()])
       logger.info('Connected');
       logger.info('Logged in as: ');
       logger.info(bot.user.username + ' - (' + bot.user.tag + ')');
-      emojiSymbols = emojiNames.reduce((acc, emo) => {
-        const emoji = Object.values(bot.emojis).find(emoji => emoji.name === emo);
-        if (emoji) {
+      emojiSymbols = bot.emojis.reduce((acc, emoji) => {
+        if (emoji.guild.name === "COTR" && emojiNames.indexOf(emoji.name) > -1) {
           return {
             ...acc,
-            [emo]: `<:${emo}:${emoji.id}>`,
-          };
+            [emoji.name]: emoji
+          }
         }
         return acc;
       }, {});
