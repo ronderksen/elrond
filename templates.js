@@ -11,6 +11,15 @@ function parseText(text, emoji) {
   return parsedText;
 }
 
+function cardShort({
+  sphere_code,
+  name,
+  sphere_name,
+  type_name,
+}, emoji) {
+  return `${emoji[sphere_code] || ''} **${name}**\n*${sphere_name} ${type_name}*`; 
+}
+
 function card({
   sphere_code,
   name,
@@ -93,6 +102,7 @@ function ally({
 
 module.exports = {
   card,
+  cardShort,
   hero,
   ally
 };

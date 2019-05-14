@@ -44,8 +44,18 @@ function createCardMessage(emoji, card) {
   }
 }
 
+function createShortCardMessage(emoji, card) {
+  return templates.cardShort(card, emoji);    
+}
+
+function fromUser(author) {
+  return (message) => message.author.id === author.id
+}
+
 module.exports = {
   getRandomItem,
   checkFilters,
-  createCardMessage
+  createCardMessage,
+  createShortCardMessage,
+  fromUser
 };

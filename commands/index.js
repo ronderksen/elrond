@@ -19,7 +19,7 @@ module.exports = function({
   return {
     help: () => help(channel),
     rings: query =>
-      rings(query, cardList, emojiSymbols, channel, logger),
+      rings(query, cardList, emojiSymbols, channel, author, logger),
     ringsimg: query => ringsimg(query, cardList, channel, logger),
     quest: () => quest(scenarioIndex, author, channel, logger),
     hero: query => hero(query, cardList, emojiSymbols, channel, logger),

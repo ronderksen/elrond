@@ -5,6 +5,7 @@ module.exports = function rings(
   cardList,
   emojiSymbols,
   channel,
+  author,
   logger
 ) {
   if (name === '') {
@@ -22,13 +23,28 @@ module.exports = function rings(
     .filter(c => helpers.checkFilters(c, filters));
 
   logger.info(`found ${matches.length} cards, sending response`);
-  if (matches.length > 3) {
-    channel.send(`I found too many cards, here are the first 3 results:`);
-    matches = matches.splice(0, 3);
+  if (matches.length === 1) {
+    const message = matches.reduce((acc, card) => {
+      acc += helpers.createCardMessage(emojiSymbols, card);
+      return acc;
+    }, "");
+    channel.send(message);
+  } else if (matches.length > 1) {
+    channel.send(`I found ${matches.length} cards, reply with the number of the one you want:`);
+    channel.send(matches.map((card, index) => {
+      const message = helpers.createShortCardMessage(emojiSymbols, card);
+      return `${index + 1}. ${message}`;
+    }).join('\n'));
+    channel.awaitMessages(helpers.fromUser(author), { max: 1, time: 60000, errors: ['time']})
+    .then(collected => {
+      const response = parseInt(collected.first().content, 10) - 1;
+      if (response > 0 && response < matches.length) {
+        channel.send(helpers.createCardMessage(emojiSymbols, matches[response]));
+      } else {
+        channel.send("Invalid response received");
+      }
+    })
+    .catch(collected => console.log('No reply received within 60 seconds'));
+  
   }
-  const message = matches.reduce((acc, card) => {
-    acc += helpers.createCardMessage(emojiSymbols, card);
-    return acc;
-  }, "");
-  channel.send(message);
 };

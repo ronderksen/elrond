@@ -1,4 +1,5 @@
 const striptags = require('striptags');
+const helpers = require('./command-helpers');
 
 function sendAnswer(channel, { ruletext = '', id, title, qa = '', ruling = '' }) {
   const body = striptags(`${ruletext}${ruling}${qa}`).replace('\n', '');
@@ -15,7 +16,7 @@ function sendErrata(channel, { errata, id, title }) {
 function sendMultiple(channel, author, answers, sendMethod) {
   channel.send(`Found ${answers.length} results, reply with the number of the one you want:`);
   channel.send(answers.map(({ title }, index) => `${index + 1}. ${title}`).join('\n'));
-  channel.awaitMessages(fromUser(author), { max: 1, time: 30000, errors: ['time']})
+  channel.awaitMessages(helpers.fromUser(author), { max: 1, time: 30000, errors: ['time']})
   .then(collected => {
     const response = parseInt(collected.first().content, 10) - 1;
     if (response > 0 && response < answers.length) {
@@ -24,12 +25,7 @@ function sendMultiple(channel, author, answers, sendMethod) {
       channel.send("Invalid response received");
     }
   })
-  .catch(collected => console.log('No reply received within 30 seconds'));
-
-}
-
-function fromUser(author) {
-  return (message) => message.author.id === author.id
+  .catch(collected => channel.send('No reply received within 30 seconds'));
 }
 
 module.exports = function rulesRef({ name, type }, { faq, glossary, erratas, cardFAQ }, channel, author, logger) {
