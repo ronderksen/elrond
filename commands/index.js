@@ -24,7 +24,7 @@ module.exports = function({
     quest: () => quest(scenarioIndex, author, channel, logger),
     hero: query => hero(query, cardList, emojiSymbols, channel, logger),
     card: query => card(query, cardList, emojiSymbols, channel, logger),
-    rr: query => rr(query, rulesRef, channel, logger),
+    rr: query => rr(query, rulesRef, channel, author, logger),
     myrings: () => myrings(author, channel, logger)
   };
 };

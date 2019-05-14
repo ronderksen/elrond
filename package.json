@@ -7,6 +7,7 @@
     "build": "docker build . -t gcr.io/proven-dryad-240407/discordbot-elrond:$npm_package_version",
     "push": "docker push gcr.io/proven-dryad-240407/discordbot-elrond:$npm_package_version",
     "deploy": "kubectl set image deployment/discordbot-elrond discordbot-elrond=gcr.io/proven-dryad-240407/discordbot-elrond:$npm_package_version",
+    "dev": "nodemon elrond.js",
     "start": "node elrond.js"
   },
   "repository": {
@@ -21,7 +22,6 @@
   },
   "homepage": "https://github.com/ronderksen/elrond#readme",
   "dependencies": {
-    "discord.io": "github:Woor/discord.io#gateway_v6",
     "discord.js": "^11.5.0",
     "node-fetch": "^2.5.0",
     "nodemon": "^1.19.0",
