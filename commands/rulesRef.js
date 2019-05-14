@@ -19,7 +19,7 @@ function sendMultiple(channel, author, answers, sendMethod) {
   channel.awaitMessages(helpers.fromUser(author), { max: 1, time: 30000, errors: ['time']})
   .then(collected => {
     const response = parseInt(collected.first().content, 10) - 1;
-    if (response > 0 && response < answers.length) {
+    if (response >= 0 && response < answers.length) {
       sendMethod(channel, answers[response]);
     } else {
       channel.send("Invalid response received");

@@ -38,7 +38,7 @@ module.exports = function rings(
     channel.awaitMessages(helpers.fromUser(author), { max: 1, time: 60000, errors: ['time']})
     .then(collected => {
       const response = parseInt(collected.first().content, 10) - 1;
-      if (response > 0 && response < matches.length) {
+      if (response >= 0 && response < matches.length) {
         channel.send(helpers.createCardMessage(emojiSymbols, matches[response]));
       } else {
         channel.send("Invalid response received");
