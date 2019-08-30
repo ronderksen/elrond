@@ -39,7 +39,7 @@ async function getCardIndex() {
 async function getQCData() {
   logger.info('Retrieving data from QC');
   try {
-    return fetch('http://lotr-lcg-quest-companion.gamersdungeon.net/api.php?format=json').then(
+    return fetch('http://lotr-lcg-quest-companion.gamersdungeon.net/api.php?format=json&parse=discord').then(
       res => res.json()
     );
   } catch (err) {
@@ -87,11 +87,15 @@ function parseQCData(qcData) {
     if (quest) {
       return [
         ...acc,
-        ...quest.map(({ '@attributes': { name }, url, hoburl }) => ({
+        ...(Array.isArray(quest) ? quest.map(({ '@attributes': { name }, url, hoburl }) => ({
           name,
           url,
           hoburl,
-        })),
+        })) : [{
+          name: quest['@attributes'].name,
+          url: quest.url,
+          hoburl: quest.hoburl
+        }])
       ];
     }
     return acc;
