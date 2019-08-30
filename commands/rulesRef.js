@@ -3,9 +3,7 @@ const helpers = require('./command-helpers');
 
 function fixEmoji(text, emoji) {
   let newText = text;
-  console.log(text);
   Object.keys(emoji).forEach(emoName => {
-    console.log(emoName);
      newText = newText.replace(new RegExp(`:${emoName}:`, 'gi'), emoji[emoName]);
   });
   return newText;
