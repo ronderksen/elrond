@@ -1,6 +1,6 @@
 {
   "name": "elrond",
-  "version": "2.3.2",
+  "version": "2.3.3",
   "description": "Discord bot for looking up cards and card images",
   "main": "elrond.js",
   "scripts": {
