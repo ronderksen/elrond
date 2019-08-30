@@ -1,14 +1,24 @@
 const striptags = require('striptags');
 const helpers = require('./command-helpers');
 
-function sendAnswer(channel, { ruletext = '', id, title, qa = '', ruling = '' }) {
-  const body = striptags(ruletext + ruling + qa).replace(/\\n/g, '\n');
+function fixEmoji(text, emoji) {
+  let newText = text;
+  console.log(text);
+  Object.keys(emoji).forEach(emoName => {
+    console.log(emoName);
+     newText = newText.replace(new RegExp(`:${emoName}:`, 'gi'), emoji[emoName]);
+  });
+  return newText;
+}
+
+function sendAnswer(channel, { ruletext = '', id, title, qa = '', ruling = '' }, emoji) {
+  const body = fixEmoji(striptags(ruletext + ruling + qa).replace(/\\n/g, '\n'), emoji);
   const url = `http://lotr-lcg-quest-companion.gamersdungeon.net/#Rule${id}`;
   channel.send(`**${title}**\n\n${body}\n\n${url}`);
 }
 
-function sendErrata(channel, { errata, id, title }) {
-  const body = striptags(errata).replace(/\\/g, "");
+function sendErrata(channel, { errata, id, title }, emoji) {
+  const body = fixEmoji(striptags(errata).replace(/\\/g, ""), emoji);
   const url = `http://lotr-lcg-quest-companion.gamersdungeon.net/#Card${id}`;
   channel.send(`**${title}**\n\n${body}\n\n${url}`);
 }
@@ -28,7 +38,7 @@ function sendMultiple(channel, author, answers, sendMethod) {
   .catch(collected => channel.send('No reply received within 30 seconds'));
 }
 
-module.exports = function rulesRef({ name, type }, { faq, glossary, erratas, cardFAQ }, channel, author, logger) {
+module.exports = function rulesRef({ name, type }, { faq, glossary, erratas, cardFAQ }, emoji, channel, author, logger) {
   const queryRegEx = new RegExp(name, 'i');
   switch (type) {
     case 'faq':
@@ -39,7 +49,7 @@ module.exports = function rulesRef({ name, type }, { faq, glossary, erratas, car
           erratas.filter(({ title, qa, ruling }) => (qa || ruling) && queryRegEx.test(title))
         );
       if (answers.length === 1) {
-        sendAnswer(channel, answers[0]);
+        sendAnswer(channel, answers[0], emoji);
         return;
       } else if (answers.length > 1) {
         sendMultiple(channel, author, answers, sendAnswer);
@@ -53,7 +63,7 @@ module.exports = function rulesRef({ name, type }, { faq, glossary, erratas, car
         return queryRegEx.test(title);
       });
       if (glossaryAnswers.length === 1) {
-        sendAnswer(channel, glossaryAnswers[0]);
+        sendAnswer(channel, glossaryAnswers[0], emoji);
         return;
       } else if (glossaryAnswers.length > 1) {
         sendMultiple(channel, author, glossaryAnswers, sendAnswer);
@@ -67,7 +77,7 @@ module.exports = function rulesRef({ name, type }, { faq, glossary, erratas, car
         return errata && queryRegEx.test(title);
       });
       if (errata.length === 1) {
-        sendErrata(channel, errata);
+        sendErrata(channel, errata, emoji);
         return;
       } else if (errata.length > 1) {
         sendMultiple(channel, author, errata, sendErrata);

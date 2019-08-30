@@ -144,6 +144,11 @@ Promise.all([getCardIndex(), getQCData()])
       'willpower',
       'threat',
       'hitpoints',
+      'attackblack',
+      'defenseblack',
+      'willpowerblack',
+      'threatblack',
+      'hitpointsblack'
     ];
     let emojiSymbols;
 
