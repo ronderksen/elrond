@@ -2,7 +2,7 @@ const striptags = require('striptags');
 const helpers = require('./command-helpers');
 
 function sendAnswer(channel, { ruletext = '', id, title, qa = '', ruling = '' }) {
-  const body = striptags(`${ruletext}${ruling}${qa}`).replace('\n', '');
+  const body = striptags(ruletext + ruling + qa).replace(/\\n/g, '\n');
   const url = `http://lotr-lcg-quest-companion.gamersdungeon.net/#Rule${id}`;
   channel.send(`**${title}**\n\n${body}\n\n${url}`);
 }
@@ -53,7 +53,7 @@ module.exports = function rulesRef({ name, type }, { faq, glossary, erratas, car
         return queryRegEx.test(title);
       });
       if (glossaryAnswers.length === 1) {
-        sendAnswer(channel, glossaryAnswer);
+        sendAnswer(channel, glossaryAnswers[0]);
         return;
       } else if (glossaryAnswers.length > 1) {
         sendMultiple(channel, author, glossaryAnswers, sendAnswer);
@@ -73,6 +73,6 @@ module.exports = function rulesRef({ name, type }, { faq, glossary, erratas, car
         sendMultiple(channel, author, errata, sendErrata);
         return;
       }
-      channel.send(`No matching errata found for card ${name}.`);      
+      channel.send(`No matching errata found for card ${name}.`);
   }
 };
