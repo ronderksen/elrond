@@ -16,7 +16,7 @@ function sendAnswer(channel, { ruletext = '', id, title, qa = '', ruling = '' },
 }
 
 function sendErrata(channel, { errata, id, title }, emoji) {
-  const body = fixEmoji(striptags(errata).replace(/\\/g, ""), emoji);
+  const body = fixEmoji(striptags(errata).replace(/\\n/g, "\n"), emoji);
   const url = `http://lotr-lcg-quest-companion.gamersdungeon.net/#Card${id}`;
   channel.send(`**${title}**\n\n${body}\n\n${url}`);
 }
@@ -75,7 +75,7 @@ module.exports = function rulesRef({ name, type }, { faq, glossary, erratas, car
         return errata && queryRegEx.test(title);
       });
       if (errata.length === 1) {
-        sendErrata(channel, errata, emoji);
+        sendErrata(channel, errata[0], emoji);
         return;
       } else if (errata.length > 1) {
         sendMultiple(channel, author, errata, sendErrata);
