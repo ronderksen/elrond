@@ -17,7 +17,7 @@ function cardShort({
   sphere_name,
   type_name,
 }, emoji) {
-  return `${emoji[sphere_code] || ''} **${name}**\n*${sphere_name} ${type_name}*`; 
+  return `${emoji[sphere_code] || ''} **${name}**\n*${sphere_name} ${type_name}*`;
 }
 
 function card({
@@ -25,6 +25,7 @@ function card({
   name,
   sphere_name,
   type_name,
+  traits,
   cost,
   text,
   flavor,
@@ -32,6 +33,9 @@ function card({
   position,
 }, emoji) {
   let message = `${emoji[sphere_code] || ''} **${name}**\n*${sphere_name} ${type_name}* - Cost: **${cost}**\n`;
+  if (traits) {
+    message += `**${traits}**\n`;
+  }
   message += `${parseText(text, emoji)}\n`;
   if (flavor) {
     message += `*${flavor.replace(/<cite>/g, " - ").replace(/<\/cite>/, "")}*\n`;
