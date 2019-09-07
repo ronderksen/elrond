@@ -130,7 +130,7 @@ Promise.all([getCardIndex(), getQCData()])
   .then(([cardList, qcData]) => {
     return [cardList, parseQCData(qcData)];
   })
-  .then(([cardList, { scenarioIndex, ...rulesRef }]) => {
+  .then(([cardList, { scenarios, ...rulesRef }]) => {
     const bot = new Discord.Client();
     const emojiNames = [
       'lore',
@@ -180,7 +180,7 @@ Promise.all([getCardIndex(), getQCData()])
         const commandConfig = {
           author,
           cardList,
-          scenarioIndex,
+          scenarios,
           rulesRef,
           emojiSymbols,
           bot,

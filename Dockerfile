@@ -1,4 +1,4 @@
-FROM mhart/alpine-node:8.9.4
+FROM mhart/alpine-node:latest
 
 WORKDIR /app
 COPY package.json package-lock.json ./
@@ -7,7 +7,7 @@ RUN apk update && \
     apk add git
 RUN npm install --production
 
-FROM mhart/alpine-node:base-8.9.4
+FROM mhart/alpine-node:latest
 WORKDIR /app
 COPY --from=0 /app .
 COPY . .
