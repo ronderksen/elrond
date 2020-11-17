@@ -152,11 +152,11 @@ Promise.all([getCardIndex(), getQCData()])
     ];
     let emojiSymbols;
 
-    bot.on('ready', evt => {
+    bot.once('ready', evt => {
       logger.info('Connected');
       logger.info('Logged in as: ');
       logger.info(bot.user.username + ' - (' + bot.user.tag + ')');
-      emojiSymbols = bot.emojis.reduce((acc, emoji) => {
+      emojiSymbols = bot.emojis.cache.reduce((acc, emoji) => {
         if (emoji.guild.name === "COTR" && emojiNames.indexOf(emoji.name) > -1) {
           return {
             ...acc,

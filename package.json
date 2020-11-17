@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/ronderksen/elrond#readme",
   "dependencies": {
-    "discord.js": "^11.5.1",
-    "node-fetch": "^2.6.0",
-    "nodemon": "^1.19.1",
+    "discord.js": "^12.4.1",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.6",
     "striptags": "^3.1.1",
-    "winston": "^3.2.1"
+    "winston": "^3.3.3"
   }
 }
