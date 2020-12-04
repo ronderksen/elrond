@@ -4,9 +4,6 @@
   "description": "Discord bot for looking up cards and card images",
   "main": "elrond.js",
   "scripts": {
-    "build": "docker build . -t gcr.io/proven-dryad-240407/discordbot-elrond:$npm_package_version",
-    "push": "docker push gcr.io/proven-dryad-240407/discordbot-elrond:$npm_package_version",
-    "deploy": "kubectl set image deployment/discordbot-elrond discordbot-elrond=gcr.io/proven-dryad-240407/discordbot-elrond:$npm_package_version",
     "dev": "nodemon elrond.js",
     "start": "node elrond.js"
   },
